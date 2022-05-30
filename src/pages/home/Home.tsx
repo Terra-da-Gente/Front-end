@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 import "./Home.css";
-import { Typography } from "@material-ui/core";
+import { Box, Typography } from "@material-ui/core";
 
 function Home() {
     return (
@@ -22,14 +22,26 @@ function Home() {
             >
 
                 <SwiperSlide className="img1">
-                    <Typography variant="h2">Terra da Gente</Typography>
+                    <Box display='inline' alignItems='center' justifyContent='center'>
+                        <Typography variant="h2">Terra da Gente</Typography>
+                        <Box display='inline'><Typography variant="h4">Projeto voltado para pequenos produtores</Typography></Box>
+                    </Box>
                 </SwiperSlide>
+
                 <SwiperSlide className="img2">
-                    <Typography variant="h2">Produtos selecionados</Typography>
+                    <Box display='inline' alignItems='center' justifyContent='center'>
+                        <Typography variant="h2">Produtos Selecionados</Typography>
+                        <Box display='inline'><Typography variant="h4">Projeto voltado para pequenos produtores</Typography></Box>
+                    </Box>
                 </SwiperSlide>
+
                 <SwiperSlide className="img3">
-                    <Typography variant="h2">Terra da Gente</Typography>
+                    <Box display='inline' alignItems='center' justifyContent='center'>
+                        <Typography variant="h2">Produtos Selecionados</Typography>
+                        <Box display='inline'><Typography variant="h4">Projeto voltado para pequenos produtores</Typography></Box>
+                    </Box>
                 </SwiperSlide>
+
             </Swiper>
 
         </>

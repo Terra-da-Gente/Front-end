@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useRef, useState } from "react";
 
 import "./Home.css";
@@ -39,6 +38,3 @@ function Home() {
 }
 
 export default Home;
-=======
-import * as React from 'react';
->>>>>>> 3f5b6f0a35291cb8fb416a6d85f8e6b8126b9de2

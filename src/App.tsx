@@ -6,6 +6,7 @@ import Contato from './pages/contato/Contato';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' ;
 import Navbar from './components/estaticos/navbar/Navbar';
 import './App.css';
+import Footer from './components/estaticos/footer/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Contato />
     <Router>
       <Navbar />
+      <Footer />
     </Router>
     </>
   );

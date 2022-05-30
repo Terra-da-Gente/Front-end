@@ -11,47 +11,60 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
+    <>
     <AppBar position="static" className="back" >
-    <Toolbar variant="dense" className="font">
-      <Box className="cursor" >
-        <Typography variant="h6" color="inherit" className="cursor" >
-          Terra da Gente
-        </Typography>
-      </Box>
+      <Toolbar variant="dense" className="font">
+        <Box className="cursor" >
+          <Typography variant="h6" color="inherit" className="cursor" >
+            Terra da Gente
+          </Typography>
+        </Box>
 
-      <Box display="flex" justifyContent="start">
-        <Box mx={1} className="cursor ">
-          <Typography variant="h6" color="inherit">
-            Home
-          </Typography>
-        </Box>
-        <Box mx={1} className="cursor">
-          <Typography variant="h6" color="inherit">
-            Produtos
-          </Typography>
-        </Box>
-        <Box mx={1} className="cursor">
-          <Typography variant="h6" color="inherit">
-            Sobre Nós
-          </Typography>
-        </Box>
-        <Box mx={1} className="cursor">
-          <Typography variant="h6" color="inherit">
-            Contato
-          </Typography>
-        </Box>
-        <Link to='/login' className="text-decorator-none">
-          <Box mx={1} className="cursor">
+        <Box display="flex" justifyContent="start">
+
+        <Link to='/home' className="text-decorator-none">
+          <Box mx={1} className="cursor ">
             <Typography variant="h6" color="inherit">
-              Login
+              Home
             </Typography>
           </Box>
-        </Link>
+          </Link>
 
-      </Box>
+          <Box mx={1} className="cursor">
+            <Typography variant="h6" color="inherit">
+              Produtos
+            </Typography>
+          </Box>
 
-    </Toolbar>
-  </AppBar>
+          <Link to='/sobre' className="text-decorator-none">
+          <Box mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                Sobre Nós
+              </Typography>
+          </Box>
+          </Link>
+
+          <Link to='/contato' className="text-decorator-none">
+          <Box mx={1} className="cursor">
+            <Typography variant="h6" color="inherit">
+              Contato
+            </Typography>
+          </Box>
+          </Link>
+          
+          <Link to='/login' className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                Login
+              </Typography>
+            </Box>
+          </Link>
+
+        </Box>
+
+      </Toolbar>
+    </AppBar>
+    </>
   );
 }
 

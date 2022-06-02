@@ -5,3 +5,5 @@ interface User{
     senha: string;
     foto: string;
 }
+
+export default User;

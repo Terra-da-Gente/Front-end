@@ -79,7 +79,7 @@ function Login() {
                 </Box>
             </Grid>
             <Grid xs={6} style={{
-                backgroundImage: `url(https://i.imgur.com/d5bMdDJ.jpg)`,
+                backgroundImage: `url(https://i.imgur.com/C03ylMZ.jpg)`,
                 backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center'
             }}>
             </Grid>

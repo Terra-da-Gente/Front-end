@@ -16,7 +16,7 @@ import { Box, Typography } from "@material-ui/core";
 function Home() {
     return (
         <>
-            <Swiper className="mySwiper" style={{ height: '80vh' }}
+            <Swiper className="mySwiper" style={{ height: '60vh'  }}
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
             >
@@ -37,8 +37,8 @@ function Home() {
 
                 <SwiperSlide className="img3">
                     <Box display='inline' alignItems='center' justifyContent='center'>
-                        <Typography variant="h2">Produtos Selecionados</Typography>
-                        <Box display='inline'><Typography variant="h4">Projeto voltado para pequenos produtores</Typography></Box>
+                        <Typography variant="h2">Nosso Instagram</Typography>
+                        <Box display='inline'><Typography variant="h4">Para saber nossas novidades</Typography></Box>
                     </Box>
                 </SwiperSlide>
 

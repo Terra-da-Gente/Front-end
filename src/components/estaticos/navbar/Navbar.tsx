@@ -49,6 +49,15 @@ function Navbar() {
           </Box>
           </Link>
 
+          
+          <Link to='/formularioCategoria' className="text-decorator-none">
+          <Box mx={1} className="cursor ">
+            <Typography variant="h6" color="inherit">
+              Cadastrar Categoria
+            </Typography>
+          </Box>
+          </Link>
+
           <Link to='/login' className="text-decorator-none">
             <Box mx={1} className="cursor">
               <Typography variant="h6" color="inherit">

@@ -1,4 +1,3 @@
-import React from 'react';
 import Home from './pages/home/Home';
 import Sobrenos from './pages/sobrenos/Sobrenos';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -10,12 +9,13 @@ import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
 import CadastrarCategoria from './components/categoria/cadastrarCategoria/CadastrarCategoria';
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
-import CadastroProduto from './components/produtos/cadastrarProduto/cadastroProduto';
-
+import CadastroProduto from './components/produtos/cadastrarProduto/CadastroProduto';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 function App() {
   return (
-    <>
+      <Provider store={store}>
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
@@ -35,7 +35,7 @@ function App() {
         </div>
         <Footer />
       </Router>
-    </>
+      </Provider>
   );
 }
 

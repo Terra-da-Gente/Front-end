@@ -1,22 +1,31 @@
-import React, { useRef, useState } from "react";
-
-// Import Swiper React components
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
-// import required modules
 import { Pagination } from "swiper";
-
 import "./Home.css";
 import { Box, Typography } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
 
 function Home() {
+
+    let navigate = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+
+    useEffect(() => {
+        if(token == ""){
+        alert("Você precisa estar logado!")
+        navigate("/login")
+        }
+    }, [token])
+
     return (
         <>
-            <Swiper className="mySwiper" style={{ height: '60vh'  }}
+            <Swiper className="mySwiper" style={{ height: '60vh' }}
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
             >

@@ -2,15 +2,20 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Container, Typography, TextField, Button } from "@material-ui/core";
 import { useNavigate, useParams } from 'react-router-dom';
 import './CadastrarCategoria.css';
-import useLocalStorage from 'react-use-localstorage';
 import { buscaId, post, put } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
 function CadastrarCategoria() {
+
     let history = useNavigate();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+
     const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
         nome: '',

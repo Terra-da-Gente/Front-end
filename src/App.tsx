@@ -20,14 +20,15 @@ function App() {
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/sobre" element={<Sobrenos />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<CadastroUsuario />} />
+            <Route path='/categoria' element={<ListaCategoria />} />
             {/* <Route path="/produtos" element={<ListaProdutos />} /> */}
             <Route path="/formularioProduto" element={<CadastroProduto />} />
-            <Route path="/formularioProduto/:id" element={<CadastroProduto />} />            <Route path='/categoria' element={<ListaCategoria />} />
+            <Route path="/formularioProduto/:id" element={<CadastroProduto />} />            
             <Route path="/formularioCategoria" element={<CadastrarCategoria />} />
             <Route path="/formularioCategoria/:id" element={<CadastrarCategoria />} />
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />

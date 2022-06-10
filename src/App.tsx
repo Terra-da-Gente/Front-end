@@ -10,11 +10,16 @@ import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
 import CadastrarCategoria from './components/categoria/cadastrarCategoria/CadastrarCategoria';
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
+import {Provider} from 'react-redux';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import store from './store/store';
 
 
 function App() {
   return (
-    <>
+
+      <Provider store={store}>
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
@@ -32,7 +37,7 @@ function App() {
         </div>
         <Footer />
       </Router>
-    </>
+      </Provider>
   );
 }
 

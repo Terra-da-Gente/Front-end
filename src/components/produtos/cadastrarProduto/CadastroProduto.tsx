@@ -105,7 +105,7 @@ function CadastroProduto() {
                         'Authorization': token
                     }
                 })
-                toast.success('Produto atualizado com sucesso!', {
+                toast.success('🌱 Produto atualizado com sucesso!', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,
@@ -138,7 +138,7 @@ function CadastroProduto() {
                         'Authorization': token
                     }
                 })
-                toast.success('Produto cadastrado com sucesso!', {
+                toast.success('🌱 Produto cadastrado com sucesso!', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,

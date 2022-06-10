@@ -5,6 +5,7 @@ import User from "../../models/User";
 import { cadastroUsuario } from "../../services/Service";
 import { useNavigate } from "react-router-dom";
 import './CadastroUsuario.css';
+import { toast } from "react-toastify";
 
 
 function CadastroUsuario() {
@@ -58,16 +59,43 @@ function CadastroUsuario() {
             //Tenta executar o cadastro
             try {
                 await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-                alert("Usuário cadastrado com sucesso")
+                toast.success('🌱 Usuario cadastrado com sucesso ', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                });
 
                 //Se houver erro, pegue o Erro e retorna uma msg   
             } catch (error) {
 
                 //Pode modificar a msg de acordo com o erro 
-                alert("Usuário já existe")
+                toast.error('Usuario já existe', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                });
             }
         } else {
-            alert("Insira no minímo 8 caracteres na senha")
+            toast.error('Insira no minimo 8 caracteres na senha', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark"
+            });
 
             setUser({...user, senha: ""})
             setConfirmarSenha("")

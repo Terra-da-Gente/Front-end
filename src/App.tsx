@@ -13,6 +13,7 @@ import CadastroProduto from './components/produtos/cadastrarProduto/CadastroProd
 import { Provider } from 'react-redux';
 import store from './store/store';
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
+import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
             <Route path='/categoria' element={<ListaCategoria />} />
             <Route path="/produtos" element={<ListaProduto />} />
             <Route path="/formularioProduto" element={<CadastroProduto />} />
+            <Route path="/deletarProduto" element={<DeletarProduto />} />
+            <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />            
             <Route path="/formularioCategoria" element={<CadastrarCategoria />} />
             <Route path="/formularioCategoria/:id" element={<CadastrarCategoria />} />

@@ -12,13 +12,12 @@ function ListaCategoria() {
   const [token, setToken] = useLocalStorage('token');
   let history = useNavigate();
 
-  useEffect(()=>{
-    if(token == ''){
-      alert("Você precisa estar logado")
-      history("/login")
-    }
-  }, [token])
-
+  // useEffect(()=>{
+  //   if(token == ''){
+  //     alert("Você precisa estar logado")
+  //     history("/login")
+  //   }
+  // }, [token])
 
   async function getCategoria(){
     await busca("/categoria", setCategoria, {

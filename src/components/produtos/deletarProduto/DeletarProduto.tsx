@@ -14,21 +14,21 @@ function DeletarProduto() {
     const { id } = useParams<{ id: string }>();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      );
+    );
     const [produto, setProduto] = useState<Produto>()
 
     useEffect(() => {
         if (token == "") {
-            // toast.error('Você precisa estar logado!', {
-            //     position: "top-right",
-            //     autoClose: 5000,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: true,
-            //     draggable: true,
-            //     progress: undefined,
-            //     theme: "dark"
-              // });
+            toast.error('Você precisa estar logado!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark"
+            });
             history("/login")
 
         }
@@ -56,17 +56,17 @@ function DeletarProduto() {
             }
         });
 
-        // toast.success('Produto deletada com sucesso !', {
-        //     position: "top-right",
-        //     autoClose: 5000,
-        //     hideProgressBar: false,
-        //     closeOnClick: true,
-        //     pauseOnHover: true,
-        //     draggable: true,
-        //     progress: undefined,
-        //     theme: "dark"
-        //   });
-        alert('Postagem deletada com sucesso');
+        toast.success('🌱 Produto deletada com sucesso !', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark"
+        });
+
     }
 
     function nao() {

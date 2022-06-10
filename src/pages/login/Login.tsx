@@ -1,19 +1,21 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import useLocalStorage from 'react-use-localstorage';
 import { Link, useNavigate } from "react-router-dom";
 import UserLogin from '../../models/UserLogin';
 import { login } from '../../services/Service';
 
 import "./Login.css";
 import { Box, Button, Grid, TextField, Typography } from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { addToken } from "../../store/tokens/actions";
 
 function Login() {
 
     // Redireciona o usuário para determinada pagina
     let history = useNavigate();
 
-    // Hooks que vão manipular o nosso Local Storage para gravar o Token
-    const [token, setToken] = useLocalStorage('token')
+    const dispatch = useDispatch();
+
+    const [token, setToken] = useState('');
 
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
@@ -35,6 +37,7 @@ function Login() {
 
     useEffect(() => {
         if (token !== "") {
+            dispatch(addToken(token))
             history('/home')
         }
     }, [token])

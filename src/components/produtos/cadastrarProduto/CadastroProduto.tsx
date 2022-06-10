@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import './CadastroProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { TokenState } from "../../store/tokens/tokensReducer";
+import { TokenState } from "../../../store/tokens/tokensReducer";
 
 function CadastroProduto() {
 
@@ -41,21 +41,21 @@ function CadastroProduto() {
         categoria: null
     })
 
-    useEffect(() => {
-        if (token === "") {
-            toast.error('Você precisa estar logado!', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: "colored",
-                progress: undefined,
-            });
-            history("/login")
-        }
-    }, [token])
+    // useEffect(() => {
+    //     if (token === "") {
+    //         toast.error('Você precisa estar logado!', {
+    //             position: "top-right",
+    //             autoClose: 2000,
+    //             hideProgressBar: false,
+    //             closeOnClick: true,
+    //             pauseOnHover: false,
+    //             draggable: false,
+    //             theme: "colored",
+    //             progress: undefined,
+    //         });
+    //         history("/login")
+    //     }
+    // }, [token])
 
     useEffect(() => {
         setProduto({
@@ -80,7 +80,7 @@ function CadastroProduto() {
     }
 
     async function findByIdProduto(id: string) {
-        await buscaId(`produtos/${id}`, setProduto, {
+        await buscaId(`produto/${id}`, setProduto, {
             headers: {
                 'Authorization': token
             }
@@ -100,12 +100,12 @@ function CadastroProduto() {
 
         if (id !== undefined) {
             try {
-                await put(`/produtos`, produto, setProduto, {
+                await put(`/produto`, produto, setProduto, {
                     headers: {
                         'Authorization': token
                     }
                 })
-                toast.success('Produto atualizado com sucesso !', {
+                toast.success('Produto atualizado com sucesso!', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,
@@ -132,14 +132,13 @@ function CadastroProduto() {
             }
 
         } else {
-            // TRY: Tenta executar o cadastro
             try {
-                await post(`/produtos`, produto, setProduto, {
+                await post(`/produto`, produto, setProduto, {
                     headers: {
                         'Authorization': token
                     }
                 })
-                toast.success('Produto cadastrado com sucesso !', {
+                toast.success('Produto cadastrado com sucesso!', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,
@@ -187,10 +186,10 @@ function CadastroProduto() {
                 <TextField value={produto.dataFabricacao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
                 <TextField value={produto.dataValidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
                 <FormControl >
-                    <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label">Categoria </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
-                        id="demo-simple-select-helper" onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema, {
+                        id="demo-simple-select-helper" onChange={(e) => buscaId(`/categoria/${e.target.value}`, setCategoria, {
                             headers: {
                                 'Authorization': token
                             }

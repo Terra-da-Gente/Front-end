@@ -16,13 +16,7 @@ function Home() {
         (state) => state.tokens
     );
 
-    // useEffect(() => {
-    //     if(token == ""){
-    //     alert("Você precisa estar logado!")
-    //     navigate("/login")
-    //     }
-    // }, [token])
-
+  
     return (
         <>
             <Swiper className="mySwiper" style={{ height: '60vh' }}

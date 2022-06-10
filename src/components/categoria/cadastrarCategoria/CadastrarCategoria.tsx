@@ -6,6 +6,7 @@ import { buscaId, post, put } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 
 function CadastrarCategoria() {
@@ -24,7 +25,16 @@ function CadastrarCategoria() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error('Você precisa estar logado ', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark"
+            });
             history("/login")
 
         }
@@ -65,11 +75,30 @@ function CadastrarCategoria() {
                         'Authorization': token
                     }
                 })
-                alert('Categoria atualizado com sucesso');
+                toast.success('🌱 Categoria atualizado com sucesso ', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                });
+                
 
             } catch (error) {
                 console.log(`Error: ${error}`)
-                alert("Erro, por favor verifique a quantidade minima de caracteres")
+                toast.error('Erro, por favor verifique a quantidade minima de caracteres ', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                });
             };
 
         } else {
@@ -79,11 +108,30 @@ function CadastrarCategoria() {
                         'Authorization': token
                     }
                 })
-                alert('Categoria cadastrado com sucesso');
+                toast.success('🌱 Categoria cadastrado com sucesso ', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                });
+                
 
             } catch (error) {
                 console.log(`Error: ${error}`)
-                alert("Erro, a quantidade minima são 5 caracteres. Por favor verifique.");
+                toast.error('Erro, a quantidade minima são 5 caracteres. Por favor verifique.', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                });
             }
         }
         back()

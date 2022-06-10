@@ -26,7 +26,7 @@ function Navbar() {
 
   var navbarComponent;
 
-  if (token !== "") {
+  if (token === "") {
     navbarComponent = <AppBar position="static" className="back" >
       <Toolbar variant="dense" className="font">
         <Box className="cursor" >
@@ -45,11 +45,68 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Box mx={1} className="cursor">
-            <Typography variant="h6" color="inherit">
-              Produtos
-            </Typography>
-          </Box>
+          <Link to='/produtos' className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                Produtos
+              </Typography>
+            </Box>
+          </Link>
+
+          <Link to='/sobre' className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                Sobre Nós
+              </Typography>
+            </Box>
+          </Link>
+
+          <Link to='/categoria' className="text-decorator-none">
+            <Box mx={1} className="cursor ">
+              <Typography variant="h6" color="inherit">
+                Categorias
+              </Typography>
+            </Box>
+          </Link>
+
+          <Link to='/login' className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                Login
+              </Typography>
+            </Box>
+          </Link>
+
+        </Box>
+
+      </Toolbar>
+    </AppBar>
+  } else {
+    navbarComponent = <AppBar position="static" className="back" >
+      <Toolbar variant="dense" className="font">
+        <Box className="cursor" >
+          <Typography variant="h6" color="inherit" className="cursor" >
+            Terra da Gente
+          </Typography>
+        </Box>
+
+        <Box display="flex" justifyContent="start">
+
+          <Link to='/home' className="text-decorator-none">
+            <Box mx={1} className="cursor ">
+              <Typography variant="h6" color="inherit">
+                Home
+              </Typography>
+            </Box>
+          </Link>
+
+          <Link to='/produtos' className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                Produtos
+              </Typography>
+            </Box>
+          </Link>
 
           <Link to='/sobre' className="text-decorator-none">
             <Box mx={1} className="cursor">
@@ -76,7 +133,15 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link to='/login' className="text-decorator-none">
+          <Link to='/formularioProduto' className="text-decorator-none">
+            <Box mx={1} className="cursor ">
+              <Typography variant="h6" color="inherit">
+                Cadastrar Produto
+              </Typography>
+            </Box>
+          </Link>
+
+          <Link to='/home' className="text-decorator-none">
             <Box mx={1} className="cursor">
               <Typography variant="h6" color="inherit">
                 Logout

@@ -12,6 +12,7 @@ import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCat
 import CadastroProduto from './components/produtos/cadastrarProduto/CadastroProduto';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import ListaProduto from './components/produtos/listaProduto/ListaProduto';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<CadastroUsuario />} />
             <Route path='/categoria' element={<ListaCategoria />} />
-            {/* <Route path="/produtos" element={<ListaProdutos />} /> */}
+            <Route path="/produtos" element={<ListaProduto />} />
             <Route path="/formularioProduto" element={<CadastroProduto />} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />            
             <Route path="/formularioCategoria" element={<CadastrarCategoria />} />

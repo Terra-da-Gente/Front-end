@@ -6,6 +6,7 @@ import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 
 
@@ -19,7 +20,17 @@ function DeletarCategoria() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+      
+            toast.error('Você precisa estar logado !', {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark"
+          });
             history("/login")
     
         }
@@ -46,7 +57,18 @@ function DeletarCategoria() {
                 'Authorization': token
               }
             });
-            alert('Categoria deletado com sucesso');
+          
+            toast.success('🌱 Categoria deletado com sucesso ', {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark"
+          });
+            
           }
         
           function nao() {

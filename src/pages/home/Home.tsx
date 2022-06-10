@@ -16,12 +16,12 @@ function Home() {
         (state) => state.tokens
     );
 
-    useEffect(() => {
-        if(token == ""){
-        alert("Você precisa estar logado!")
-        navigate("/login")
-        }
-    }, [token])
+    // useEffect(() => {
+    //     if(token == ""){
+    //     alert("Você precisa estar logado!")
+    //     navigate("/login")
+    //     }
+    // }, [token])
 
     return (
         <>

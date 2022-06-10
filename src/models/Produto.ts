@@ -1,5 +1,5 @@
 import Categoria from "./Categoria"
-import User from "./User"
+// import User from "./User"
 
 interface Produto {
     id: number

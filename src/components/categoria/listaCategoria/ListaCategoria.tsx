@@ -17,13 +17,12 @@ function ListaCategoria() {
 
   let history = useNavigate();
 
-  useEffect(()=>{
-    if(token == ''){
-      alert("Você precisa estar logado")
-      history("/login")
-    }
-  }, [token])
-
+  // useEffect(()=>{
+  //   if(token == ''){
+  //     alert("Você precisa estar logado")
+  //     history("/login")
+  //   }
+  // }, [token])
 
   async function getCategoria(){
     await busca("/categoria", setCategoria, {

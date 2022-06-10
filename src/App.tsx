@@ -1,4 +1,3 @@
-import React from 'react';
 import Home from './pages/home/Home';
 import Sobrenos from './pages/sobrenos/Sobrenos';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -10,26 +9,26 @@ import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
 import CadastrarCategoria from './components/categoria/cadastrarCategoria/CadastrarCategoria';
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
-import {Provider} from 'react-redux';
-import {ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import CadastroProduto from './components/produtos/cadastrarProduto/CadastroProduto';
+import { Provider } from 'react-redux';
 import store from './store/store';
-
 
 function App() {
   return (
-
       <Provider store={store}>
       <Router>
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/sobre" element={<Sobrenos />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastro" element={<CadastroUsuario />} />
             <Route path='/categoria' element={<ListaCategoria />} />
+            {/* <Route path="/produtos" element={<ListaProdutos />} /> */}
+            <Route path="/formularioProduto" element={<CadastroProduto />} />
+            <Route path="/formularioProduto/:id" element={<CadastroProduto />} />            
             <Route path="/formularioCategoria" element={<CadastrarCategoria />} />
             <Route path="/formularioCategoria/:id" element={<CadastrarCategoria />} />
             <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />

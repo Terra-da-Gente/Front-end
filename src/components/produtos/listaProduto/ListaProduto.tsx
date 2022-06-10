@@ -15,25 +15,25 @@ function ListaProduto() {
     const [produtos, setProdutos] = useState<Produto[]>([])
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      );
+    );
     let navigate = useNavigate();
 
-    // useEffect(() => {
-    //     if (token == "") {
-    //         toast.error('VocÃª precisa estar logado!', {
-    //             position: "top-right",
-    //             autoClose: 5000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "dark"
-    //           });
-    //         navigate("/login")
+    useEffect(() => {
+        if (token == "") {
+            toast.error('Você precisa estar logado!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark"
+            });
+            navigate("/login")
 
-    //     }
-    // }, [token])
+        }
+    }, [token])
 
     async function getProduto() {
         await busca("/produto", setProdutos, {
@@ -61,13 +61,13 @@ function ListaProduto() {
                                     Produtos
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                {produtos.nome}
+                                    {produtos.nome}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                {produtos.descricao}
+                                    {produtos.descricao}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                {produtos.categoria?.nome}
+                                    {produtos.categoria?.nome}
                                 </Typography>
                             </CardContent>
                             <CardActions>

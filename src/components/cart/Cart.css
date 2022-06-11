@@ -1,0 +1,23 @@
+.card-container {
+    display: flex!important;
+    width: 800px;
+}
+
+.card-product {
+    display: flex!important;
+    width: 800px!important;
+}
+
+.card-product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-product-button {
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.card-product-button button {
+    width: 200px!important;
+}

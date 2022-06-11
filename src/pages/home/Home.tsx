@@ -46,7 +46,7 @@ function Home() {
                 <Grid item xs={12} style={{ height: '30vh' }} alignItems="center"></Grid>
 
                 {/* ----- ITEM 3 ----- */}
-                <Grid item xs={12} style={{ height: '30vh', marginBottom:200 }} alignItems="center">
+                <Grid item xs={12} style={{ height: '30vh', marginBottom: 200 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
                     <Swiper
                         slidesPerView={6}
@@ -67,8 +67,8 @@ function Home() {
                     </Swiper>
                 </Grid>
 
-                {/* ----- ITEM 2 ----- */}
-                <Grid item xs={6} style={{ height: '40vh' }} >
+                {/* ----- ITEM 4 ----- */}
+                <Grid item xs={6} style={{ height: '40vh', marginBottom: 200 }} >
                     <Box marginLeft={20}>
                         <Typography align="left" variant='h5' style={{ fontWeight: 'bold', letterSpacing: 4, lineHeight: 2 }}> VIDEO</Typography>
                         <Typography align="left" variant='h6' style={{ marginTop: 15 }}>LOREM.</Typography>
@@ -77,12 +77,18 @@ function Home() {
                 </Grid>
 
                 <Grid item xs={6} >
-                    <Box className="video" padding={10} style={{ height: '40vh' }}>
+                    <Box className="video" padding={10} style={{ height: '40vh', marginBottom: 200 }}>
+                        <iframe src="https://player.vimeo.com/video/328192920?h=d475fff31e" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
                     </Box>
                 </Grid>
 
-                {/* ----- ITEM 4 ----- */}
-                <Grid item xs={12} style={{ height: '30vh' }} alignItems="center"></Grid>
+                {/* ----- ITEM 5 ----- */}
+                <Grid item xs={12} style={{ height: '60vh', marginBottom: 200 }} alignItems="center">
+                    <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
+
+
+
+                </Grid>
 
             </Grid>
         </>

@@ -1,30 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import SwiperCore, { Autoplay, Pagination } from "swiper";
 import "./Home.css";
 import { Box, Grid, Typography } from "@material-ui/core";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { TokenState } from "../../store/tokens/tokensReducer";
 
 function Home() {
-
-    let navigate = useNavigate();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
-
-
+    SwiperCore.use([Autoplay])
     return (
         <>
             {/* ----- ITEM 1 ----- */}
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid item xs={12} style={{ height: '60vh' }} alignItems="center">
-                    <Swiper className="mySwiper"
+
+                    < Swiper className="mySwiper"
                         modules={[Pagination]}
                         pagination={{ clickable: true }}
+                        speed={1400}
+                        autoplay={{ delay: 4000 }}
                     >
                         <SwiperSlide className="img1">
                             <Box display='inline' alignItems='center' justifyContent='center'>
@@ -55,7 +48,7 @@ function Home() {
 
                 {/* ----- ITEM 3 ----- */}
                 <Grid item xs={12} style={{ height: '30vh' }} alignItems="center">
-                <Typography style={{ letterSpacing: 6 }}variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
+                    <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
                     <Swiper
                         slidesPerView={6}
                         spaceBetween={30}

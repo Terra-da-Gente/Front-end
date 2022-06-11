@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import SwiperCore, { Autoplay, Pagination } from "swiper";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import "./Home.css";
+import "swiper/css/navigation";
 import { Box, Grid, Typography } from "@material-ui/core";
 
 function Home() {
@@ -52,10 +52,8 @@ function Home() {
                     <Swiper
                         slidesPerView={6}
                         spaceBetween={30}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        modules={[Pagination]}
+                        modules={[Navigation]}
+                        navigation={true}
                         className="mySwiperProduct"
                     >
                         <SwiperSlide className="prod1">Slide 1</SwiperSlide>

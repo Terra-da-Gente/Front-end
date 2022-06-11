@@ -38,7 +38,7 @@ function Navbar() {
 
   var navbarComponent;
 
-  if (token === "") {
+  if (token === "" ) {
     navbarComponent = <AppBar position="static" className="back" >
       <Toolbar variant="dense" className="font">
         <Box className="cursor" >
@@ -65,18 +65,18 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link to='/sobre' className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                Sobre Nós
-              </Typography>
-            </Box>
-          </Link>
-
           <Link to='/categoria' className="text-decorator-none">
             <Box mx={1} className="cursor ">
               <Typography variant="h6" color="inherit">
                 Categorias
+              </Typography>
+            </Box>
+          </Link>
+
+          <Link to='/sobre' className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                Sobre Nós
               </Typography>
             </Box>
           </Link>
@@ -120,14 +120,6 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link to='/sobre' className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                Sobre Nós
-              </Typography>
-            </Box>
-          </Link>
-
           <Link to='/categoria' className="text-decorator-none">
             <Box mx={1} className="cursor ">
               <Typography variant="h6" color="inherit">
@@ -136,6 +128,13 @@ function Navbar() {
             </Box>
           </Link>
 
+          <Link to='/formularioProduto' className="text-decorator-none">
+            <Box mx={1} className="cursor ">
+              <Typography variant="h6" color="inherit">
+                Cadastrar Produto
+              </Typography>
+            </Box>
+          </Link>
 
           <Link to='/formularioCategoria' className="text-decorator-none">
             <Box mx={1} className="cursor ">
@@ -145,10 +144,10 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link to='/formularioProduto' className="text-decorator-none">
-            <Box mx={1} className="cursor ">
+          <Link to='/sobre' className="text-decorator-none">
+            <Box mx={1} className="cursor">
               <Typography variant="h6" color="inherit">
-                Cadastrar Produto
+                Sobre Nós
               </Typography>
             </Box>
           </Link>

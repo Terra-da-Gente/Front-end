@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { addToken } from '../../../store/tokens/actions';
+import { toast } from 'react-toastify';
 
 function Navbar() {
 
@@ -21,12 +22,23 @@ function Navbar() {
 
   function goLogout() {
     dispatch(addToken(''));
-    history("/login")
+    // alert("Usuario deslogado")
+    toast.info('Usuario deslogado!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark"
+    });
+    history('/home')
   }
 
   var navbarComponent;
 
-  if (token === "") {
+  if (token === "" ) {
     navbarComponent = <AppBar position="static" className="back" >
       <Toolbar variant="dense" className="font">
         <Box className="cursor" >
@@ -53,18 +65,18 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link to='/sobre' className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                Sobre Nós
-              </Typography>
-            </Box>
-          </Link>
-
           <Link to='/categoria' className="text-decorator-none">
             <Box mx={1} className="cursor ">
               <Typography variant="h6" color="inherit">
                 Categorias
+              </Typography>
+            </Box>
+          </Link>
+
+          <Link to='/sobre' className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                Sobre Nós
               </Typography>
             </Box>
           </Link>
@@ -108,27 +120,10 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link to='/sobre' className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                Sobre Nós
-              </Typography>
-            </Box>
-          </Link>
-
           <Link to='/categoria' className="text-decorator-none">
             <Box mx={1} className="cursor ">
               <Typography variant="h6" color="inherit">
                 Categorias
-              </Typography>
-            </Box>
-          </Link>
-
-
-          <Link to='/formularioCategoria' className="text-decorator-none">
-            <Box mx={1} className="cursor ">
-              <Typography variant="h6" color="inherit">
-                Cadastrar Categoria
               </Typography>
             </Box>
           </Link>
@@ -141,13 +136,28 @@ function Navbar() {
             </Box>
           </Link>
 
-          <Link to='/home' className="text-decorator-none">
-            <Box mx={1} className="cursor">
+          <Link to='/formularioCategoria' className="text-decorator-none">
+            <Box mx={1} className="cursor ">
               <Typography variant="h6" color="inherit">
-                Logout
+                Cadastrar Categoria
               </Typography>
             </Box>
           </Link>
+
+          <Link to='/sobre' className="text-decorator-none">
+            <Box mx={1} className="cursor">
+              <Typography variant="h6" color="inherit">
+                Sobre Nós
+              </Typography>
+            </Box>
+          </Link>
+
+          <Box mx={1} className="cursor" onClick={goLogout}>
+            <Typography variant="h6" color="inherit">
+              Logout
+            </Typography>
+          </Box>
+
 
         </Box>
 

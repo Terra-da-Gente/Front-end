@@ -84,10 +84,16 @@ function ListaProduto() {
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' color="secondary" className='button-deletar'>
                                                 deletar
-                                            </Button>
+                                            </Button>                                       
                                         </Box>
                                     </Link>
-                                    
+                                    <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
+                                    <Box mx={1}>
+                                        <Button variant='contained' size='small' color="secondary">
+                                            Comprar
+                                        </Button>
+                                    </Box>
+                                    </Link>
                                 </Box>
                             </CardActions>
                         </Card>

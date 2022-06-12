@@ -17,8 +17,6 @@ function ListaCategoria() {
 
   let history = useNavigate();
 
- 
-
   async function getCategoria(){
     await busca("/categoria", setCategoria, {
       headers: {
@@ -26,7 +24,6 @@ function ListaCategoria() {
       }
     })
   }
-
 
   useEffect(()=>{
     getCategoria()

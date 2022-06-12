@@ -2,6 +2,7 @@ import { Box, Button, Card, TextField, Typography } from "@material-ui/core";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import Produto from "../../models/Produto";
 import { buscaId } from "../../services/Service";
 import { TokenState } from "../../store/tokens/tokensReducer";
@@ -25,7 +26,7 @@ function Cart() {
         quantidade: 6,
         descricao: '',
         preco: 8.50,
-        foto1: "https://s2.glbimg.com/osevdX4hgAbhp630e5ajLpuAkSA=/620x455/e.glbimg.com/og/ed/f/original/2018/09/20/luxo_organico_01.jpg",
+        foto1: "",
         foto2: "",
         peso: 0.5,
         perecivel: true,
@@ -65,7 +66,16 @@ function Cart() {
     }
 
     function confirmSales() {
-        alert("Compra confirmada! Verifique seu email!")
+        toast.success('🛒 Compra confirmada! Verifique seu email!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark"
+        });
         history("/produtos")
     }
 
@@ -74,7 +84,7 @@ function Cart() {
             <Box m={2} display='flex' justifyContent="center">
                 <Card variant="outlined" className="card-container">
                     <div className='card-product'>
-                        <img src={produto.foto1} alt="imagem_organicos" />
+                        <img src={produto.foto1} alt="imagem_organicos" className="card-product-image" />
 
                         <div className="card-product-info">
                             <Typography color="textSecondary" gutterBottom>

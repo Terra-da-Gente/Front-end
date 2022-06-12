@@ -76,7 +76,7 @@ function ListaProduto() {
                                     {produtos.peso} kg
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    Perecivel: {produtos.perecivel}
+                                    {produtos.perecivel.valueOf.toString}
                                 </Typography>
                             </CardContent>
                             <CardActions>

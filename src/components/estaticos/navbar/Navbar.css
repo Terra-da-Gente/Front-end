@@ -19,3 +19,10 @@
 .text-decorator-none {
     text-decoration: none;
 }
+
+.logo-tamanho{
+    width: 129px;
+    height: 85px;
+    left: 24px;
+    top: 15px;
+}

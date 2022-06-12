@@ -57,17 +57,26 @@ function ListaProduto() {
                     <Box m={2} >
                         <Card variant="outlined">
                             <CardContent>
-                                <Typography color="textSecondary" gutterBottom>
+                                {/* <Typography color="textSecondary" gutterBottom>
                                     Produtos
-                                </Typography>
-                                <Typography variant="h5" component="h2">
+                                </Typography> */}
+                                <Typography variant="h4" component="h2">
                                     {produtos.nome}
+                                </Typography>
+                                <Typography variant="h6" component="p">
+                                    {produtos.categoria?.nome}
                                 </Typography>
                                 <Typography variant="body2" component="p">
                                     {produtos.descricao}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produtos.categoria?.nome}
+                                    R$ {produtos.preco}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    {produtos.peso} kg
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    Perecivel: {produtos.perecivel}
                                 </Typography>
                             </CardContent>
                             <CardActions>

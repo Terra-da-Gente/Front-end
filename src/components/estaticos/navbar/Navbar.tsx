@@ -42,9 +42,7 @@ function Navbar() {
     navbarComponent = <AppBar position="static" className="back" >
       <Toolbar variant="dense" className="font">
         <Box className="cursor" >
-          <Typography variant="h6" color="inherit" className="cursor" >
-            Terra da Gente
-          </Typography>
+         <a><img src="https://i.imgur.com/3prwZU3.png" alt="logo" className='logo-tamanho' /></a>
         </Box>
 
         <Box display="flex" justifyContent="start">
@@ -97,9 +95,7 @@ function Navbar() {
     navbarComponent = <AppBar position="static" className="back" >
       <Toolbar variant="dense" className="font">
         <Box className="cursor" >
-          <Typography variant="h6" color="inherit" className="cursor" >
-            Terra da Gente
-          </Typography>
+          <a><img src="https://i.imgur.com/3prwZU3.png" alt="logo" className='logo-tamanho' /></a>
         </Box>
 
         <Box display="flex" justifyContent="start">

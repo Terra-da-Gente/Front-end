@@ -72,19 +72,13 @@
 .produto {
   position: absolute;
   left: center;
-  bottom: center;
   color: rgb(0, 0, 0);
-  background-color: rgba(238, 238, 238, 0.682);
-  border-radius: 5px;
 }
 
 .preco {
   position: absolute;
   left: center;
-  bottom: 5px;
   color: rgb(0, 0, 0);
-  background-color: rgba(238, 238, 238, 0.682);
-  border-radius: 5px;
 }
 
 

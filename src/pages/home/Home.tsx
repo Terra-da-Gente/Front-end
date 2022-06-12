@@ -3,7 +3,7 @@ import "swiper/css";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import "./Home.css";
 import "swiper/css/navigation";
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Card, CardContent, Grid, Typography } from "@material-ui/core";
 import { busca, buscasemtoken } from "../../services/Service";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -121,16 +121,24 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 5 ----- */}
-                <Grid item xs={12} style={{ height: '30vh', marginBottom: 200 }} alignItems="center">
+                <Grid item xs={12} style={{ height: '60vh', marginBottom: 200 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
-                    <Swiper className="mySwiperProduct" slidesPerView={6} spaceBetween={30} modules={[Navigation]} navigation={true}>
+                    <Swiper className="mySwiperProduct" slidesPerView={5} spaceBetween={10} modules={[Navigation]} navigation={true}>
                         {
                             produtos.map(produtos => (
 
                                 <SwiperSlide>
-                                    <img className="swiper-image" src={produtos.foto1} /> 
-                                    <Typography variant='h6' className='produto'>{produtos.nome}</Typography>
-                                    <Typography variant='subtitle1' className='preco'>R${produtos.preco}</Typography>
+                                    <Card>
+                                        <CardContent>
+                                            <img src={produtos.foto1} />
+                                            <CardContent>
+                                            <Typography variant='h5' className='produto'>{produtos.nome}</Typography>
+                                            </CardContent>
+                                            <CardContent>
+                                            <Typography variant='subtitle1' className='preco'>R${produtos.preco}</Typography>
+                                            </CardContent>
+                                        </CardContent>
+                                    </Card>
                                 </SwiperSlide>
                             ))
                         }

@@ -8,6 +8,10 @@
     width: 800px!important;
 }
 
+.card-product-image {
+    width: 10vw!important;
+}
+
 .card-product-info {
     display: flex;
     flex-direction: column;

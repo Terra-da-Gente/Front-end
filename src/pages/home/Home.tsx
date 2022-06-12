@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
-import "./Home.css";
-import "swiper/css/navigation";
 import { Box, Card, CardContent, Grid, Typography } from "@material-ui/core";
+import "./Home.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { busca, buscasemtoken } from "../../services/Service";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -11,7 +12,6 @@ import Categoria from "../../models/Categoria";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import Produto from "../../models/Produto";
-import { ClassNames } from "@emotion/react";
 
 function Home() {
     const [categoria, setCategoria] = useState<Categoria[]>([])
@@ -48,17 +48,20 @@ function Home() {
     }, [produtos.length])
 
     SwiperCore.use([Autoplay])
+
     return (
         <>
             {/* ----- ITEM 1 ----- */}
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid item xs={12} style={{ height: '60vh' }} alignItems="center">
 
-                    < Swiper className="mySwiper"
-                        modules={[Pagination]}
+                    < Swiper
+                        className="mySwiper"
                         pagination={{ clickable: true }}
+                        navigation={true}
                         speed={1400}
                         autoplay={{ delay: 4000 }}
+                        modules={[Pagination, Navigation]}
                     >
                         <SwiperSlide className="img1">
                             <Box display='inline' alignItems='center' justifyContent='center'>
@@ -94,7 +97,14 @@ function Home() {
 
                     <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
 
-                    <Swiper className="mySwiperCategoria" slidesPerView={6} spaceBetween={30} modules={[Navigation]} navigation={true}>
+                    <Swiper
+                        className="mySwiperCategoria"
+                        slidesPerView={6}
+                        spaceBetween={30}
+                        navigation={true}
+                        modules={[Navigation]}
+                        >
+                            
                         {
                             categoria.map(categoria => (
                                 <SwiperSlide className="prod1">{categoria.nome}</SwiperSlide>
@@ -132,10 +142,10 @@ function Home() {
                                         <CardContent>
                                             <img src={produtos.foto1} />
                                             <CardContent>
-                                            <Typography variant='h5' className='produto'>{produtos.nome}</Typography>
+                                                <Typography variant='h5' className='produto'>{produtos.nome}</Typography>
                                             </CardContent>
                                             <CardContent>
-                                            <Typography variant='subtitle1' className='preco'>R${produtos.preco}</Typography>
+                                                <Typography variant='subtitle1' className='preco'>R${produtos.preco}</Typography>
                                             </CardContent>
                                         </CardContent>
                                     </Card>

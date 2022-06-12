@@ -1,0 +1,47 @@
+.button-atualizar {
+    color: white !important;
+    background-color: #01401C!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.button-atualizar:hover {
+    background-color: #02733E!important;
+    letter-spacing: 0.12cm!important;
+    box-shadow: 0 0 35px #038C4C!important;
+}
+
+.button-deletar {
+    color: white !important;
+    background-color: #73030D!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.button-deletar:hover {
+    background-color: #8C041D!important;
+    letter-spacing: 0.12cm!important;
+    box-shadow: 0 0 35px #8C041D!important;
+}
+
+.button-comprar {
+    color: white !important;
+    background-color: #011540!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.button-comprar:hover {
+    background-color: #025373!important;
+    letter-spacing: 0.12cm!important;
+    box-shadow: 0 0 35px #031c8c!important;
+}

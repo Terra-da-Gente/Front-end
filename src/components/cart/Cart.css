@@ -9,6 +9,7 @@
 }
 
 .card-product-image {
+    margin-right: 10px!important;
     width: 10vw!important;
 }
 
@@ -24,4 +25,36 @@
 
 .card-product-button button {
     width: 200px!important;
+}
+
+.button-comprar-produto {
+    color: white !important;
+    background-color: #082f81!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.button-comprar-produto:hover {
+    background-color: #025373!important;
+    letter-spacing: 0.12cm!important;
+    box-shadow: 0 0 35px #031c8c!important;
+}
+
+.button-cancelar-compra {
+    color: white !important;
+    background-color: #73030D!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.button-cancelar-compra:hover {
+    background-color: #8C041D!important;
+    letter-spacing: 0.12cm!important;
+    box-shadow: 0 0 35px #8C041D!important;
 }

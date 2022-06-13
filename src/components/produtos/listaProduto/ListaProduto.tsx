@@ -57,17 +57,26 @@ function ListaProduto() {
                     <Box m={2} >
                         <Card variant="outlined">
                             <CardContent>
-                                <Typography color="textSecondary" gutterBottom>
+                                {/* <Typography color="textSecondary" gutterBottom>
                                     Produtos
-                                </Typography>
-                                <Typography variant="h5" component="h2">
+                                </Typography> */}
+                                <Typography variant="h4" component="h2">
                                     {produtos.nome}
+                                </Typography>
+                                <Typography variant="h6" component="p">
+                                    {produtos.categoria?.nome}
                                 </Typography>
                                 <Typography variant="body2" component="p">
                                     {produtos.descricao}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produtos.categoria?.nome}
+                                    R$ {produtos.preco}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    {produtos.peso} kg
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    {produtos.perecivel.valueOf.toString}
                                 </Typography>
                             </CardContent>
                             <CardActions>
@@ -89,7 +98,7 @@ function ListaProduto() {
                                     </Link>
                                     <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
                                     <Box mx={1}>
-                                        <Button variant='contained' size='small' color="secondary">
+                                        <Button variant='contained' size='small' color="secondary" className='button-comprar'>
                                             Comprar
                                         </Button>
                                     </Box>

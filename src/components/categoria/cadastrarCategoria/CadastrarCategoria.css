@@ -1,3 +1,36 @@
-.topo{
+.topo {
     margin-top: 20px;
+}
+
+.button-finalizar-categoria {
+    color: white !important;
+    background-color: #082f81!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.button-finalizar-categoria:hover {
+    background-color: #025373!important;
+    letter-spacing: 0.12cm!important;
+    box-shadow: 0 0 35px #031c8c!important;
+}
+
+.button-cancelar-categoria {
+    margin-left: 10px!important;
+    color: white !important;
+    background-color: #73030D!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.button-cancelar-categoria:hover {
+    background-color: #8C041D!important;
+    letter-spacing: 0.12cm!important;
+    box-shadow: 0 0 35px #8C041D!important;
 }

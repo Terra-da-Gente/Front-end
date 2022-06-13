@@ -9,6 +9,13 @@ export const busca = async (url:any, setDados:any, header:any)=>{
     const resposta = await api.get(url,header)
     setDados (resposta.data)
 }
+
+// ---------Busca sem token---------
+export const buscasemtoken = async (url:any, setDados:any)=>{
+    const resposta = await api.get(url)
+    setDados (resposta.data)
+}
+
 export const buscaId = async (url:any, setDados:any, header:any)=>{
     const resposta = await api.get(url,header)
     setDados (resposta.data)

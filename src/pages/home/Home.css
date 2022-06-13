@@ -50,10 +50,9 @@
   background-position: 10% 20%;
 }
 
-.mySwiperProduct {
-  background: #eee;
+.mySwiperCategoria {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: #000;
   margin: 0;
   padding: 0;
@@ -64,3 +63,48 @@
   url('../../assets/images/pexels-pixabay-219794.jpg');
   border-radius: 100%;
 }
+
+.categoria-graos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),url('../../assets/images/pexels-polina-tankilevitch-4110255.jpg');
+  border-radius: 100%;
+  background-position: right;
+  cursor: pointer;
+  color: white;
+}
+
+.categoria-lacteos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),url('../../assets/images/61f11be99ae41.jpg');
+  border-radius: 100%;
+}
+
+.categoria-sucos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),url('../../assets/images/900-473-sucos-diferentes.jpg');
+  border-radius: 100%;
+}
+
+.categoria-higiene {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),url('../../assets/images/melhores-produtos-de-limpeza.jpg');
+  border-radius: 100%;
+}
+
+.swiper-image {
+  border-radius: 100%;
+}
+
+.produto {
+  position: absolute;
+  left: center;
+  color: rgb(0, 0, 0);
+}
+
+.preco {
+  position: absolute;
+  left: center;
+  color: rgb(0, 0, 0);
+}
+
+

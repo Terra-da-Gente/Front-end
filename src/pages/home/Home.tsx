@@ -89,24 +89,11 @@ function Home() {
                 {/* ----- ITEM 2 ----- */}
                 {/* <Grid item xs={12} style={{ height: '30vh' }} alignItems="center"></Grid> */}
 
-                {/* ----- ITEM 4 ----- */}
-                < Grid item xs={6} style={{ height: '30vh', marginBottom: 200, marginTop: 50 }}>
-                    <Box marginLeft={20}>
-                        <Typography align="left" variant='h5' style={{ fontWeight: 'bold', letterSpacing: 4, lineHeight: 2 }}> VIDEO</Typography>
-                        <Typography align="left" variant='h6' style={{ marginTop: 15 }}>LOREM.</Typography>
-                        <Typography align="left" variant='h6' style={{ marginTop: 15 }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Typography>
-                    </Box>
-                </Grid>
 
-                <Grid item xs={6} >
-                    <Box className="video" padding={10} style={{ height: '40vh', marginBottom: 200 }}>
-                        <iframe src="https://player.vimeo.com/video/328192920?h=d475fff31e" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
-                    </Box>
-                </Grid>
 
                 {/* ----- ITEM 3 ----- */}
 
-                <Grid item xs={12} style={{ height: '30vh', marginBottom: 200 }} alignItems="center">
+                <Grid item xs={12} style={{ height: '30vh', marginBottom: 200, marginTop: 100 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
                     <Swiper
                         className="mySwiperCategoria"
@@ -149,6 +136,19 @@ function Home() {
                             ))
                         }
                     </Swiper>
+                </Grid>
+                {/* ----- ITEM 4 ----- */}
+                < Grid item xs={6} style={{ height: '30vh', marginBottom: 200, marginTop: 50 }}>
+                    <Box marginLeft={20}>
+                        <Typography align="left" variant='h5' style={{ fontWeight: 'bold', letterSpacing: 4, lineHeight: 2 }}> VIDEO</Typography>
+                        <Typography align="left" variant='h6' style={{ marginTop: 15 }}>LOREM.</Typography>
+                        <Typography align="left" variant='h6' style={{ marginTop: 15 }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={6} >
+                    <Box className="video" padding={10} style={{ height: '40vh', marginBottom: 200 }}>
+                        <iframe src="https://www.youtube.com/embed/B7HdmzRBT9U" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+                    </Box>
                 </Grid>
 
             </Grid>

@@ -73,10 +73,10 @@ function ListaProduto() {
                                     R$ {produtos.preco}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produtos.peso} kg
+                                    {produtos.peso} kg/lt
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produtos.perecivel.valueOf.toString}
+                                   Perecível: {produtos.perecivel.valueOf.toString}
                                 </Typography>
                             </CardContent>
                             <CardActions>

@@ -144,7 +144,7 @@ function Home() {
                         }
                     </Swiper>
                 </Grid>
-                {/* ----- ITEM 4 ----- */}
+                {/* ----- ITEM 6 ----- */}
                 < Grid item xs={6} style={{ height: '30vh', marginBottom: 200, marginTop: 50 }}>
                     <Box marginLeft={20}>
                         <Typography align="left" variant='h5' style={{ fontWeight: 'bold', letterSpacing: 4, lineHeight: 2 }}> VIDEO</Typography>

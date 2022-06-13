@@ -17,12 +17,12 @@ function Cards() {
             <h4 className="title">Web Developer</h4>
           </div>
           <ul className="social redes-sobre-nos">
-            <li><a href="https://github.com/Terra-da-Gente" target="_blank">
+            <li><a href="https://www.linkedin.com/in/alexandrebsilva/" target="_blank">
                         <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
-                <a href="https://github.com/Terra-da-Gente" target="_blank">
+                <a href="https://github.com/alebs10" target="_blank">
                         <GitHub className="redes-sobre-nos" />
                 </a>
             </li>
@@ -41,12 +41,12 @@ function Cards() {
             <h4 className="title">Web Developer</h4>
           </div>
           <ul className="social">
-          <li><a href="https://github.com/Terra-da-Gente" target="_blank">
+          <li><a href="https://www.linkedin.com/in/daniel-gardeli/" target="_blank">
                         <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
-                <a href="https://github.com/Terra-da-Gente" target="_blank">
+                <a href="https://github.com/gardeli96" target="_blank">
                         <GitHub className="redes-sobre-nos" />
                 </a>
             </li>
@@ -111,12 +111,12 @@ function Cards() {
             <h4 className="title">Web Developer</h4>
           </div>
           <ul className="social">
-          <li><a href="https://github.com/Terra-da-Gente" target="_blank">
+          <li><a href="https://www.linkedin.com/in/mateusnog95/" target="_blank">
                         <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
-                <a href="https://github.com/Terra-da-Gente" target="_blank">
+                <a href="https://github.com/nogran" target="_blank">
                         <GitHub className="redes-sobre-nos" />
                 </a>
             </li>

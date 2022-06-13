@@ -1,3 +1,19 @@
 .text-decorator-none {
     text-decoration: none;
 }
+
+.button-login {
+    color: white !important;
+    background-color: #0D0D0D!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    letter-spacing: 0.1cm!important;
+    padding: 10px 30px;
+    transition: 0.5s!important;
+}
+
+.button-login:hover {
+    background-color: #0F4032!important;
+    letter-spacing: 0.12cm!important;
+    box-shadow: 0 0 35px #025928!important;
+}

@@ -17,6 +17,7 @@ import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cart from './components/cart/Cart';
+import Cards from './pages/sobrenos/cards/Cards';
 
 function App() {
   return (

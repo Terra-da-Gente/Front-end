@@ -15,7 +15,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
     font-family: 'Montserrat', sans-serif!important;
     font-style: normal;
     font-weight: 800;
@@ -27,13 +26,22 @@ body{
     padding-right: 70px;
 }
 
+.titulo-sobre{
+    font-weight: bolder!important;
+}
+
+.titulo-nos{
+    height: 70px;
+    color: #0c743e;
+    font-weight: bold!important;
+}
 .titulosobrenos{
+    
     font-family: 'Montserrat', sans-serif!important;
 }
 
 .textosobrenos{
     font-family: 'Montserrat', sans-serif!important;
-
 }
 
 .segundoconteudo{
@@ -44,6 +52,10 @@ body{
     font-style: normal;
 }
 
+.terceiroconteudo{
+    display: flex;
+    flex-direction: row;
+}
 
 .ultimoconteudo{
     display: flex;

@@ -17,3 +17,13 @@
     letter-spacing: 0.12cm!important;
     box-shadow: 0 0 35px #025928!important;
 }
+
+.gif{
+    background-repeat: no-repeat !important;
+    width:100vw !important;
+    min-height: 100vh !important;
+    background-size: 80% !important;
+    background-position: center !important;
+    /* width: auto;
+    height: auto; */
+}

@@ -1,9 +1,9 @@
 .bg {
-    background: linear-gradient(36deg, #000000 15%, #258100 65%, #164d01 20%)!important;
+    background: linear-gradient(36deg, #c4ff3a 15%, #30a302 65%)!important;
 }
 
 .pos-background {
-    background: linear-gradient(36deg, #000000 15%, #258100 65%, #164d01 5%)!important;
+    background: linear-gradient(36deg, #252525 15%, #383838 65%, #444444 5%)!important;
     height: 60px;
 }
 
@@ -14,4 +14,8 @@
 .redes {
     font-size: 60px!important;
     color: white!important;
+}
+.git{
+    color: white;
+    font-size: 50px!important;
 }

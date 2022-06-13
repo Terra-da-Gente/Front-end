@@ -31,7 +31,7 @@ function Footer() {
                         <InstagramIcon className="redes" />
                     </a>
                     <a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <GitHub className="redes" />
+                        <GitHub className="git" />
                     </a>
                 </Box>
             </Box>

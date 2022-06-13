@@ -125,7 +125,7 @@ function Cart() {
 
                     <Box className="card-product-button">
                         <Box mx={1}>
-                            <Button onClick={confirmSales} variant="contained" size="small" className="button-comprar-produto">
+                            <Button onClick={confirmSales} variant="contained" size="small" className="button-comprar-home">
                                 Confirmar Compra
                             </Button>
                         </Box>

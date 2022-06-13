@@ -73,7 +73,7 @@ function ListaProduto() {
                                     R$ {produtos.preco}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produtos.peso} kg
+                                    {produtos.peso} kg/lt
                                 </Typography>
                                 <Typography variant="body2" component="p">
                                    Perecível: {produtos.perecivel.valueOf.toString}

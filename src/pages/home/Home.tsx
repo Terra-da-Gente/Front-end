@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { busca, buscasemtoken } from "../../services/Service";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Categoria from "../../models/Categoria";
 import { useSelector } from "react-redux";
@@ -87,36 +87,10 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 2 ----- */}
-                <Grid item xs={12} style={{ height: '30vh' }} alignItems="center"></Grid>
-
-                {/* ----- ITEM 3 ----- */}
-
-
-
-                <Grid item xs={12} style={{ height: '30vh', marginBottom: 200 }} alignItems="center">
-
-                    <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
-
-                    <Swiper
-                        className="mySwiperCategoria"
-                        slidesPerView={6}
-                        spaceBetween={30}
-                        navigation={true}
-                        modules={[Navigation]}
-                        >
-                            
-                        {
-                            categoria.map(categoria => (
-                                <SwiperSlide className="prod1">{categoria.nome}</SwiperSlide>
-                            ))
-                        }
-                    </Swiper>
-
-                </Grid>
-
+                {/* <Grid item xs={12} style={{ height: '30vh' }} alignItems="center"></Grid> */}
 
                 {/* ----- ITEM 4 ----- */}
-                < Grid item xs={6} style={{ height: '40vh', marginBottom: 200 }} >
+                < Grid item xs={6} style={{ height: '30vh', marginBottom: 200, marginTop: 50 }}>
                     <Box marginLeft={20}>
                         <Typography align="left" variant='h5' style={{ fontWeight: 'bold', letterSpacing: 4, lineHeight: 2 }}> VIDEO</Typography>
                         <Typography align="left" variant='h6' style={{ marginTop: 15 }}>LOREM.</Typography>
@@ -130,13 +104,35 @@ function Home() {
                     </Box>
                 </Grid>
 
+                {/* ----- ITEM 3 ----- */}
+
+                <Grid item xs={12} style={{ height: '30vh', marginBottom: 200 }} alignItems="center">
+                    <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
+                    <Swiper
+                        className="mySwiperCategoria"
+                        slidesPerView={6}
+                        spaceBetween={30}
+                        modules={[Navigation]}
+                        navigation={true}
+                    >
+
+                        <SwiperSlide className="categoria-graos">Grãos, cereais e farinhas</SwiperSlide>
+                        <SwiperSlide className="categoria-lacteos">Lácteos</SwiperSlide>
+                        <SwiperSlide className="categoria-sucos">Sucos e bebidas</SwiperSlide>
+                        <SwiperSlide className="categoria-higiene">Higiene e limpeza</SwiperSlide>
+                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
+                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
+                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
+                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
+                    </Swiper>
+                </Grid>
+
                 {/* ----- ITEM 5 ----- */}
                 <Grid item xs={12} style={{ height: '60vh', marginBottom: 200 }} alignItems="center">
-                    <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
+                    <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
                     <Swiper className="mySwiperProduct" slidesPerView={5} spaceBetween={10} modules={[Navigation]} navigation={true}>
                         {
                             produtos.map(produtos => (
-
                                 <SwiperSlide>
                                     <Card>
                                         <CardContent>
@@ -153,7 +149,6 @@ function Home() {
                             ))
                         }
                     </Swiper>
-
                 </Grid>
 
             </Grid>

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export const api = axios.create({
-    baseURL: 'https://terradagente.herokuapp.com'
+    baseURL: 'https://nogran-terra-da-gente.herokuapp.com/'
 })
 
 export const busca = async (url:any, setDados:any, header:any)=>{

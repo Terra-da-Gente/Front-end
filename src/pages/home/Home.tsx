@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
-import { Box, Card, CardContent, Grid, Typography } from "@material-ui/core";
+import { Box, Button, Card, CardContent, Grid, Typography } from "@material-ui/core";
 import "./Home.css";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -123,12 +123,19 @@ function Home() {
                                 <SwiperSlide>
                                     <Card>
                                         <CardContent>
-                                            <img src={produtos.foto1} />
+                                            <img src={produtos.foto1} className="tamanho-img-card" />
                                             <CardContent>
                                                 <Typography variant='h5' className='produto'>{produtos.nome}</Typography>
                                             </CardContent>
                                             <CardContent>
                                                 <Typography variant='subtitle1' className='preco'>R${produtos.preco}</Typography>
+                                            </CardContent>
+                                            <CardContent>
+                                                <Link to={`/carrinho/${produtos.id}`} >
+                                                    <Button className="button-comprar-home">
+                                                        Comprar
+                                                    </Button>
+                                                </Link>
                                             </CardContent>
                                         </CardContent>
                                     </Card>

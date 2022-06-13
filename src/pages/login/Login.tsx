@@ -105,9 +105,11 @@ function Login() {
                 </Box>
             </Grid>
             <Grid xs={6} style={{
-                backgroundImage: `url(https://i.imgur.com/LwCzGMi.png)`,
+                backgroundImage: `url(https://s8.gifyu.com/images/Bem-vinde74f92ab42c784c5b.gif)`,
                 backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center'
             }}>
+                
+            
             </Grid>
         </Grid>
     );

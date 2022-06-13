@@ -4,7 +4,7 @@ import { Box, Card, CardActions, CardContent, Button, Typography } from '@materi
 import './ListaProduto.css';
 
 
-import { busca } from '../../../services/Service';
+import { busca, buscasemtoken } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -18,29 +18,25 @@ function ListaProduto() {
     );
     let navigate = useNavigate();
 
-    useEffect(() => {
-        if (token == "") {
-            toast.error('Você precisa estar logado!', {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark"
-            });
-            navigate("/login")
+    // useEffect(() => {
+    //     if (token == "") {
+    //         toast.error('Você precisa estar logado!', {
+    //             position: "top-right",
+    //             autoClose: 5000,
+    //             hideProgressBar: false,
+    //             closeOnClick: true,
+    //             pauseOnHover: true,
+    //             draggable: true,
+    //             progress: undefined,
+    //             theme: "dark"
+    //         });
+    //         navigate("/login")
 
-        }
-    }, [token])
+    //     }
+    // }, [token])
 
     async function getProduto() {
-        await busca("/produto", setProdutos, {
-            headers: {
-                'Authorization': token
-            }
-        })
+        await buscasemtoken("/produto", setProdutos)
     }
 
     useEffect(() => {
@@ -49,10 +45,11 @@ function ListaProduto() {
 
     }, [produtos.length])
 
+    var produtosComponent;
 
-    return (
-        <>
-            {
+    if (token === "") {
+        {
+            produtosComponent =
                 produtos.map(produtos => (
                     <Box m={2} >
                         <Card variant="outlined">
@@ -74,10 +71,73 @@ function ListaProduto() {
                                     R$ {produtos.preco}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produtos.peso} kg/lt
+                                    {produtos.peso} kg/l
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                   Perecível: {produtos.perecivel ? 'Sim' : 'Não'}
+                                    Perecível: {produtos.perecivel ? 'Sim' : 'Não'}
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Box display="flex" justifyContent="center" mb={1.5}>
+
+                                    {/* <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
+                                        <Box mx={1}>
+                                            <Button variant="contained" className="marginLeft button-atualizar" size='small' color="primary" >
+                                                atualizar
+                                            </Button>
+                                        </Box>
+                                    </Link>
+                                    <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
+                                        <Box mx={1}>
+                                            <Button variant="contained" size='small' color="secondary" className='button-deletar'>
+                                                deletar
+                                            </Button>
+                                        </Box>
+                                    </Link> */}
+                                    <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
+                                        <Box mx={1}>
+                                            <Button variant='contained' size='small' color="secondary" className='button-comprar'>
+                                                Comprar
+                                            </Button>
+                                        </Box>
+                                    </Link>
+                                </Box>
+                            </CardActions>
+                        </Card>
+                    </Box>
+                ))
+        }
+
+
+    } else {
+        {
+            produtosComponent =
+
+                produtos.map(produtos => (
+                    <Box m={2} >
+                        <Card variant="outlined">
+                            <CardContent>
+                                {/* <Typography color="textSecondary" gutterBottom>
+                                    Produtos
+                                </Typography> */}
+                                <img src={produtos.foto1} alt="imagem_do_produto" className="imagem-produto" />
+                                <Typography variant="h4" component="h2">
+                                    {produtos.nome}
+                                </Typography>
+                                <Typography variant="h6" component="p">
+                                    {produtos.categoria?.nome}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    {produtos.descricao}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    R$ {produtos.preco}
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    {produtos.peso} kg/l
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                    Perecível: {produtos.perecivel ? 'Sim' : 'Não'}
                                 </Typography>
                             </CardContent>
                             <CardActions>
@@ -94,23 +154,29 @@ function ListaProduto() {
                                         <Box mx={1}>
                                             <Button variant="contained" size='small' color="secondary" className='button-deletar'>
                                                 deletar
-                                            </Button>                                       
+                                            </Button>
                                         </Box>
                                     </Link>
                                     <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
-                                    <Box mx={1}>
-                                        <Button variant='contained' size='small' color="secondary" className='button-comprar'>
-                                            Comprar
-                                        </Button>
-                                    </Box>
+                                        <Box mx={1}>
+                                            <Button variant='contained' size='small' color="secondary" className='button-comprar'>
+                                                Comprar
+                                            </Button>
+                                        </Box>
                                     </Link>
                                 </Box>
                             </CardActions>
                         </Card>
                     </Box>
                 ))
-            }
-        </>)
-}
+        }
+    }
 
-export default ListaProduto;
+        return (
+            <>
+                {produtosComponent}
+            </>
+        )
+    }
+
+    export default ListaProduto;

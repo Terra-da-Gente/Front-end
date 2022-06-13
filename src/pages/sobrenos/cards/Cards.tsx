@@ -16,14 +16,14 @@ function Cards() {
             <h3 className="name">Alexandre</h3>
             <h4 className="title">Web Developer</h4>
           </div>
-          <ul className="social">
+          <ul className="social redes-sobre-nos">
             <li><a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <LinkedIn className="redes" />
+                        <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
                 <a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <GitHub className="redes" />
+                        <GitHub className="redes-sobre-nos" />
                 </a>
             </li>
           </ul>
@@ -42,12 +42,12 @@ function Cards() {
           </div>
           <ul className="social">
           <li><a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <LinkedIn className="redes" />
+                        <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
                 <a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <GitHub className="redes" />
+                        <GitHub className="redes-sobre-nos" />
                 </a>
             </li>
           </ul>
@@ -65,12 +65,12 @@ function Cards() {
           </div>
           <ul className="social">
           <li><a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <LinkedIn className="redes" />
+                        <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
                 <a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <GitHub className="redes" />
+                        <GitHub className="redes-sobre-nos" />
                 </a>
             </li>
           </ul>
@@ -88,12 +88,12 @@ function Cards() {
           </div>
           <ul className="social">
           <li><a href="https://www.linkedin.com/in/leticia-zuniga/" target="_blank">
-                        <LinkedIn className="redes" />
+                        <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
                 <a href="https://github.com/LeZuniga" target="_blank">
-                        <GitHub className="redes" />
+                        <GitHub className="redes-sobre-nos" />
                 </a>
             </li>
           </ul>
@@ -112,12 +112,12 @@ function Cards() {
           </div>
           <ul className="social">
           <li><a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <LinkedIn className="redes" />
+                        <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
                 <a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <GitHub className="redes" />
+                        <GitHub className="redes-sobre-nos" />
                 </a>
             </li>
           </ul>
@@ -135,12 +135,12 @@ function Cards() {
           </div>
           <ul className="social">
           <li><a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <LinkedIn className="redes" />
+                        <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
                 <a href="https://github.com/Terra-da-Gente" target="_blank">
-                        <GitHub className="redes" />
+                        <GitHub className="redes-sobre-nos" />
                 </a>
             </li>
           </ul>

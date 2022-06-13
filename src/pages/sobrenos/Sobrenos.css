@@ -17,7 +17,6 @@ body{
     align-items: center;
     font-family: 'Montserrat', sans-serif!important;
     font-style: normal;
-    font-weight: 800;
     font-size: 36px;
     line-height: 44px;
     text-align: center;
@@ -27,22 +26,23 @@ body{
 }
 
 .titulo-sobre{
+    height: 70px;
     font-weight: bolder!important;
 }
 
-.titulo-nos{
+/* .titulo-nos{
     height: 70px;
     color: #0c743e;
     font-weight: bold!important;
 }
+
 .titulosobrenos{
-    
     font-family: 'Montserrat', sans-serif!important;
 }
 
 .textosobrenos{
     font-family: 'Montserrat', sans-serif!important;
-}
+} */
 
 .segundoconteudo{
     margin-top: 48px;

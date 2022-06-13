@@ -10,19 +10,22 @@ function Sobrenos() {
         <>
             <section>
                 <div className="primeiroconteudo">
-                    <Typography className="titulo-sobre" variant="h3">Sobre</Typography>
-                    <Typography className="titulo-nos" variant="h3">Nós</Typography>
-                    <Typography className="texto-sobre-nos" variant="h6"> O projeto Terra da Gente visa melhorar a qualidade de vida e fornecer meios de subsistência para as familias em situação de assentamento envolvidas, bem como incentivar o consumo de produtos e serviços dos  pequenos empreendedores, agricultores rurais e urbanos em situação de vulnerabilidade.</Typography>
+                    <Typography className="titulo-sobre" variant="h3">Sobre Nós</Typography>
+                    {/* <Typography className="titulo-nos" variant="h3">Nós</Typography> */}
+                    <Typography className="texto-sobre" variant="h6"> O projeto Terra da Gente visa melhorar a qualidade de vida e fornecer meios de subsistência para as familias em situação de assentamento envolvidas, bem como incentivar o consumo de produtos e serviços dos  pequenos empreendedores, agricultores rurais e urbanos em situação de vulnerabilidade.</Typography>
                 </div>
             </section>
+
             <section className="segundoconteudo">
                 <div>
                     <Typography className="textosobrenos" variant="h3" color="initial">Nosso Time: </Typography>
                 </div>
             </section>
+
             <section className="terceiroconteudo">
                 <Cards/>
             </section>
+            
             <section className="ultimoconteudo">
                 <div>
                     <form>

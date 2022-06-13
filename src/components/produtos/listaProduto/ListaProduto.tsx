@@ -60,6 +60,7 @@ function ListaProduto() {
                                 {/* <Typography color="textSecondary" gutterBottom>
                                     Produtos
                                 </Typography> */}
+                                <img src={produtos.foto1} alt="imagem_do_produto" className="imagem-produto" />
                                 <Typography variant="h4" component="h2">
                                     {produtos.nome}
                                 </Typography>

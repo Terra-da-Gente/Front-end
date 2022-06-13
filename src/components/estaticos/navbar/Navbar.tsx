@@ -38,11 +38,11 @@ function Navbar() {
 
   var navbarComponent;
 
-  if (token === "" ) {
+  if (token === "") {
     navbarComponent = <AppBar position="static" className="back" >
       <Toolbar variant="dense" className="font">
         <Box className="cursor" >
-         <a><img src="https://i.imgur.com/3prwZU3.png" alt="logo" className='logo-tamanho' /></a>
+          <a><img src="https://i.imgur.com/kiP5t0p.png" alt="logo" className='logo-tamanho' /></a>
         </Box>
 
         <Box display="flex" justifyContent="start">
@@ -95,11 +95,10 @@ function Navbar() {
     navbarComponent = <AppBar position="static" className="back" >
       <Toolbar variant="dense" className="font">
         <Box className="cursor" >
-          <a><img src="https://i.imgur.com/3prwZU3.png" alt="logo" className='logo-tamanho' /></a>
+          <a><img src="https://i.imgur.com/kiP5t0p.png" alt="logo" className='logo-tamanho' /></a>
         </Box>
 
         <Box display="flex" justifyContent="start">
-
           <Link to='/home' className="text-decorator-none">
             <Box mx={1} className="cursor ">
               <Typography variant="h6" color="inherit">

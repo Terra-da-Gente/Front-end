@@ -87,12 +87,6 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 2 ----- */}
-                {/* <Grid item xs={12} style={{ height: '30vh' }} alignItems="center"></Grid> */}
-
-
-
-                {/* ----- ITEM 3 ----- */}
-
                 <Grid item xs={12} style={{ height: '30vh', marginBottom: 200, marginTop: 100 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
                     <Swiper
@@ -102,7 +96,6 @@ function Home() {
                         modules={[Navigation]}
                         navigation={true}
                     >
-
                         <SwiperSlide className="categoria-graos">Grãos, cereais e farinhas</SwiperSlide>
                         <SwiperSlide className="categoria-lacteos">Lácteos</SwiperSlide>
                         <SwiperSlide className="categoria-sucos">Sucos e bebidas</SwiperSlide>
@@ -114,7 +107,7 @@ function Home() {
                     </Swiper>
                 </Grid>
 
-                {/* ----- ITEM 5 ----- */}
+                {/* ----- ITEM 3 ----- */}
                 <Grid item xs={12} style={{ height: '60vh', marginBottom: 200 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
                     <Swiper className="mySwiperProduct" slidesPerView={5} spaceBetween={10} modules={[Navigation]} navigation={true}>
@@ -144,7 +137,9 @@ function Home() {
                         }
                     </Swiper>
                 </Grid>
-                {/* ----- ITEM 6 ----- */}
+
+                {/* ----- ITEM 4 ----- */}
+                {/* <Grid item xs={12} style={{ height: '30vh' }} alignItems="center"></Grid> */}
                 < Grid item xs={6} style={{ height: '30vh', marginBottom: 200, marginTop: 50 }}>
                     <Box marginLeft={20}>
                         <Typography align="left" variant='h5' style={{ fontWeight: 'bold', letterSpacing: 4, lineHeight: 2 }}> VIDEO</Typography>
@@ -157,9 +152,7 @@ function Home() {
                         <iframe src="https://www.youtube.com/embed/B7HdmzRBT9U" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
                     </Box>
                 </Grid>
-
             </Grid>
-
         </>
     )
 }

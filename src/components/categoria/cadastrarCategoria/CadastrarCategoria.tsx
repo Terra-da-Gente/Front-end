@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Container, Typography, TextField, Button } from "@material-ui/core";
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import './CadastrarCategoria.css';
 import { buscaId, post, put } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
@@ -146,9 +146,14 @@ function CadastrarCategoria() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro categoria</Typography>
                 <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="nome" variant="outlined" name="nome" margin="normal" fullWidth required />
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" className='button-finalizar-categoria'>
                     Finalizar
                 </Button>
+                <Link to="/categoria">
+                <Button type="submit" variant="contained" className='button-cancelar-categoria'>
+                    Cancelar
+                </Button>
+                </Link>
             </form>
         </Container>
     )

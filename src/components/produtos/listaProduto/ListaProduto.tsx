@@ -98,7 +98,7 @@ function ListaProduto() {
                                     </Link>
                                     <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
                                     <Box mx={1}>
-                                        <Button variant='contained' size='small' color="secondary">
+                                        <Button variant='contained' size='small' color="secondary" className='button-comprar'>
                                             Comprar
                                         </Button>
                                     </Box>

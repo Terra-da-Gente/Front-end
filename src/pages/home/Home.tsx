@@ -1,17 +1,19 @@
+import { useEffect, useState } from "react";
+import { busca, buscasemtoken } from "../../services/Service";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import "./Home.css";
+
+import Produto from "../../models/Produto";
+import Categoria from "../../models/Categoria";
+import { Box, Button, Card, CardContent, Grid, Typography } from "@material-ui/core";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
-import { Box, Button, Card, CardContent, Grid, Typography } from "@material-ui/core";
-import "./Home.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { busca, buscasemtoken } from "../../services/Service";
-import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Categoria from "../../models/Categoria";
-import { useSelector } from "react-redux";
-import { TokenState } from "../../store/tokens/tokensReducer";
-import Produto from "../../models/Produto";
 
 function Home() {
     const [categoria, setCategoria] = useState<Categoria[]>([])
@@ -74,6 +76,7 @@ function Home() {
                         speed={1400}
                         autoplay={{ delay: 4000 }}
                         modules={[Pagination, Navigation]}
+                        loop={true}
                     >
                         <SwiperSlide className="img1">
                             <Box display='inline' alignItems='center' justifyContent='center'>

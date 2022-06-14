@@ -191,15 +191,15 @@ function CadastroProduto() {
                
                 <TextField value={produto.quantidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="quantidade" label="quantidade" variant="outlined" name="quantidade" margin="normal" fullWidth required />
                 
-                <TextField value={produto.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
+                {/* <TextField value={produto.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth /> */}
                 
                 <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="preco" label="preco" variant="outlined" name="preco" margin="normal" fullWidth required />
                 
                 <TextField value={produto.foto1} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="foto1" label="foto1" variant="outlined" name="foto1" margin="normal" fullWidth />
                
-                {/* <TextField value={produto.foto2} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="foto2" label="foto2" variant="outlined" name="foto2" margin="normal" fullWidth /> */}
+                <TextField value={produto.foto2} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="foto2" label="foto2" variant="outlined" name="foto2" margin="normal" fullWidth />
                
-                <TextField value={produto.peso} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="peso" label="peso" variant="outlined" name="peso" margin="normal" fullWidth required />
+                <TextField value={produto.peso} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="peso" label="peso(kg) / volume(l)" variant="outlined" name="peso" margin="normal" fullWidth required />
                
                 {/* <TextField value={produto.ativo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id="ativo" label="ativo" variant="outlined" name="ativo" margin="normal" fullWidth required /> */}
                 

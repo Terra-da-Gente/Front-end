@@ -24,10 +24,6 @@
     transition: 0.5s!important;
 }
 
-.imagem-produto {
-    width: 10vw !important;
-}
-
 .button-deletar:hover {
     background-color: #8C041D!important;
     letter-spacing: 0.12cm!important;
@@ -48,4 +44,16 @@
     background-color: #025373!important;
     letter-spacing: 0.12cm!important;
     box-shadow: 0 0 35px #031c8c!important;
+}
+
+.imagemok {
+    width: 200px !important;
+    height: 250px !important;
+    transition: 0.5s !important;
+}
+
+.imagemok:hover {
+    width: 200px !important;
+    height: 250px !important;
+    box-shadow: 0 0 20px #868686 !important;
 }

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaProduto.css';
-
-
 import { busca, buscasemtoken } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import { useSelector } from 'react-redux';
@@ -17,6 +15,13 @@ function ListaProduto() {
         (state) => state.tokens
     );
     let navigate = useNavigate();
+
+    const cardStyle = {
+        display: "block",
+        transitionDuration: "0.3s",
+        width: "300px",
+        height: "520px"
+    };
 
     // useEffect(() => {
     //     if (token == "") {
@@ -51,13 +56,16 @@ function ListaProduto() {
         {
             produtosComponent =
                 produtos.map(produtos => (
-                    <Box m={2} >
-                        <Card variant="outlined">
+
+                    <Box display="flex" flexWrap="wrap" justifyContent="center">
+                        <Card style={cardStyle}>
                             <CardContent>
                                 {/* <Typography color="textSecondary" gutterBottom>
                                     Produtos
                                 </Typography> */}
-                                <img src={produtos.foto1} alt="imagem_do_produto" className="imagem-produto" />
+                                <Box display="flex" alignItems="center" justifyContent="center">
+                                    <img src={produtos.foto1} className="imagemok" />
+                                </Box>
                                 <Typography variant="h4" component="h2">
                                     {produtos.nome}
                                 </Typography>
@@ -76,6 +84,7 @@ function ListaProduto() {
                                 <Typography variant="body2" component="p">
                                     Perecível: {produtos.perecivel ? 'Sim' : 'Não'}
                                 </Typography>
+
                             </CardContent>
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5}>
@@ -104,10 +113,10 @@ function ListaProduto() {
                                 </Box>
                             </CardActions>
                         </Card>
-                    </Box>
+
+                    </Box >
                 ))
         }
-
 
     } else {
         {
@@ -172,11 +181,18 @@ function ListaProduto() {
         }
     }
 
-        return (
-            <>
+    return (
+        <>
+            <Grid
+                container
+                direction="row"
+                justifyContent="space-evenly"
+                alignItems="center"
+            >
                 {produtosComponent}
-            </>
-        )
-    }
+            </Grid>
+        </>
+    )
+}
 
-    export default ListaProduto;
+export default ListaProduto;

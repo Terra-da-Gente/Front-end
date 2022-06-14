@@ -64,12 +64,12 @@ function Cards() {
             <h4 className="title">Web Developer</h4>
           </div>
           <ul className="social">
-          <li><a href="https://github.com/Terra-da-Gente" target="_blank">
+          <li><a href="https://www.linkedin.com/in/gustavohms1998/" target="_blank">
                         <LinkedIn className="redes-sobre-nos" />
                 </a>
             </li>
             <li>                    
-                <a href="https://github.com/Terra-da-Gente" target="_blank">
+                <a href="https://github.com/guhms1998" target="_blank">
                         <GitHub className="redes-sobre-nos" />
                 </a>
             </li>

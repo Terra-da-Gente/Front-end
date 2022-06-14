@@ -7,6 +7,7 @@ import Produto from '../../../models/Produto';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { margin, padding } from '@mui/system';
 
 function ListaProduto() {
 
@@ -20,7 +21,8 @@ function ListaProduto() {
         display: "block",
         transitionDuration: "0.3s",
         width: "300px",
-        height: "520px"
+        height: "520px",
+        marginTop: "25px"
     };
 
     // useEffect(() => {

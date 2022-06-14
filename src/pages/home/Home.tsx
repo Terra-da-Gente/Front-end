@@ -59,7 +59,12 @@ function Home() {
     return (
         <>
             {/* ----- ITEM 1 ----- */}
-            <Grid container direction="row" justifyContent="center" alignItems="center">
+            <Grid
+                container
+                direction="row"
+                justifyContent="space-evenly"
+                alignItems="center"
+            >
                 <Grid item xs={12} style={{ height: '60vh' }} alignItems="center">
 
                     < Swiper
@@ -102,7 +107,7 @@ function Home() {
                         speed={35000}
                         loop={true}
                         autoplay={{ delay: 1, disableOnInteraction: true }}
-                        freeMode={ true }
+                        freeMode={true}
                     >
 
                         <SwiperSlide className="imagemswiper"></SwiperSlide>

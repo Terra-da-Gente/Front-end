@@ -36,9 +36,19 @@ function Cart() {
     })
 
     useEffect(() => {
-        if (token === "") {
-            alert("Você precisa estar logado!")
+        if (token == "") {
+            toast.error('Você precisa estar logado ', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark"
+            });
             history("/login")
+
         }
     }, [token])
 
@@ -115,7 +125,7 @@ function Cart() {
 
 
                             <Typography variant="body2" component="p">
-                                Total: R$ {valorTotal()}
+                                Total: R$ {valorTotal().toFixed(2)}
                             </Typography>
 
                         </div>
@@ -125,7 +135,7 @@ function Cart() {
 
                     <Box className="card-product-button">
                         <Box mx={1}>
-                            <Button onClick={confirmSales} variant="contained" size="small" color="primary">
+                            <Button onClick={confirmSales} variant="contained" size="small" className="button-comprar-home">
                                 Confirmar Compra
                             </Button>
                         </Box>
@@ -133,7 +143,7 @@ function Cart() {
 
                     <Link to="/produtos" className="card-product-button">
                         <Box mx={1}>
-                            <Button variant="contained" size="small" color="secondary">
+                            <Button variant="contained" size="small" className="button-cancelar-compra">
                                 Cancelar
                             </Button>
                         </Box>

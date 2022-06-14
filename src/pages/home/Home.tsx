@@ -141,7 +141,6 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 4 ----- */}
-
                 <Grid item xs={12} style={{ height: '60vh', marginBottom: 200 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
                     <Swiper className=" " slidesPerView={4} speed={800} slidesPerGroup={4} loop={true} spaceBetween={10} modules={[Navigation]} navigation={true}>
@@ -173,11 +172,6 @@ function Home() {
                         }
                     </Swiper>
                 </Grid>
-
-
-                {/* ----- ITEM 4 ----- */}
-                {/* <Grid item xs={12} style={{ height: '30vh' }} alignItems="center"></Grid> */}
-                < Grid item xs={6} style={{ height: '30vh', marginBottom: 200, marginTop: 50 }}>
 
                 {/* ----- ITEM 5 ----- */}
                 < Grid item xs={6} style={{ height: '30vh', marginBottom: 300 }}>

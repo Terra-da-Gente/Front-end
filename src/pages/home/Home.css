@@ -110,6 +110,7 @@
     
     .button-comprar-home {
         margin-top: 10px!important;
+        margin-right: 80px;
         color: white !important;
         background-color: #011540!important;
         text-decoration: none!important;
@@ -124,3 +125,5 @@
         letter-spacing: 0.12cm!important;
         box-shadow: 0 0 35px #031c8c!important;
     }
+
+ 

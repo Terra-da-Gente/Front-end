@@ -49,6 +49,18 @@ function Home() {
 
     SwiperCore.use([Autoplay])
 
+    const cardStyle = {
+        display: "block",
+        transitionDuration: "0.3s",
+        width: "35vw",
+        height: "50vh"
+      };
+
+      const cardStyleImg = {
+        width: "25vw",
+        height: "30vh"
+      };
+
     return (
         <>
             {/* ----- ITEM 1 ----- */}
@@ -118,14 +130,14 @@ function Home() {
                         {
                             produtos.map(produtos => (
                                 <SwiperSlide>
-                                    <Card>
-                                        <CardContent>
+                                    <Card style={cardStyle}>
+                                        <CardContent style={cardStyleImg}>
                                             <img src={produtos.foto1} className="tamanho-img-card" />
                                             <CardContent>
                                                 <Typography variant='h5' className='produto'>{produtos.nome}</Typography>
                                             </CardContent>
                                             <CardContent>
-                                                <Typography variant='subtitle1' className='preco'>R${produtos.preco}</Typography>
+                                                <Typography variant='h6' className='preco'>R${produtos.preco}</Typography>
                                             </CardContent>
                                             <CardContent>
                                                 <Link to={`/carrinho/${produtos.id}`} >

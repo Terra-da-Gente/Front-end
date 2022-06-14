@@ -94,7 +94,21 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 2 ----- */}
-                {/* <Grid item xs={12} style={{ height: '30vh' }} alignItems="center"></Grid> */}
+                <Grid item xs={12} style={{ height: '20vh' }} alignItems="center">
+                    <Swiper
+                        modules={[Pagination]}
+                        slidesPerView={1}
+                        spaceBetween={0}
+                        speed={35000}
+                        loop={true}
+                        autoplay={{ delay: 1, disableOnInteraction: true }}
+                        freeMode={ true }
+                    >
+
+                        <SwiperSlide className="imagemswiper"></SwiperSlide>
+                    </Swiper>
+
+                </Grid>
 
                 {/* ----- ITEM 3 ----- */}
                 <Grid item xs={12} style={{ height: '30vh', marginBottom: 200, marginTop: 100 }} alignItems="center">
@@ -121,14 +135,14 @@ function Home() {
                 {/* ----- ITEM 4 ----- */}
                 <Grid item xs={12} style={{ height: '60vh', marginBottom: 200 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
-                    <Swiper className=" " slidesPerView={5} spaceBetween={10} modules={[Navigation]} navigation={true}>
+                    <Swiper className=" " slidesPerView={4} speed={800} slidesPerGroup={4} loop={true} spaceBetween={10} modules={[Navigation]} navigation={true}>
                         {
                             produtos.map(produtos => (
                                 <SwiperSlide>
                                     <Card style={cardStyle}>
                                         <CardContent>
                                             <Box display="flex" alignItems="center" justifyContent="center">
-                                                < img src={produtos.foto1} className="imagemok"/>
+                                                < img src={produtos.foto1} className="imagemok" />
                                             </Box>
                                             <CardContent>
                                                 <Typography variant='h5' className='produto'>{produtos.nome}</Typography>

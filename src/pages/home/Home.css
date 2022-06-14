@@ -127,3 +127,7 @@
         height: 250px !important;
         box-shadow: 0 0 20px #868686 !important;
     }
+
+    .imagemswiper {
+        background-image: url('../../assets/images/melhores-produtos-de-limpeza.jpg');
+    }

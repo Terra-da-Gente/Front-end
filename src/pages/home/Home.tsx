@@ -141,7 +141,7 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 4 ----- */}
-                <Grid item xs={12} style={{ height: '60vh', marginBottom: 200 }} alignItems="center">
+                <Grid item xs={12} style={{ height: '60vh', marginBottom: 100 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
                     <Swiper className=" " slidesPerView={4} speed={800} slidesPerGroup={4} loop={true} spaceBetween={10} modules={[Navigation]} navigation={true}>
                         {
@@ -174,16 +174,16 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 5 ----- */}
-                < Grid item xs={6} style={{ height: '30vh', marginBottom: 300 }}>
-                    <Box marginLeft={20}>
+                < Grid item xs={6} style={{ height: '30vh', marginBottom: 250, marginTop:100 }}>
+                    <Box marginLeft={20} alignItems="center">
                         <Typography align="left" variant='h5' style={{ fontWeight: 'bold', letterSpacing: 4, lineHeight: 2 }}>Terra da Gente</Typography>
-                        <Typography align="left" variant='h6' style={{ marginTop: 15 }}>Terra da Gente</Typography>
+                        {/* <Typography align="left" variant='h6' style={{ marginTop: 15 }}>Terra da Gente</Typography> */}
                         <Typography align="left" variant='h6' style={{ marginTop: 15 }}>O projeto Terra da Gente visa melhorar a qualidade de vida e fornecer meios de subsistência para as famílias em situação de assentamento envolvidas, bem como incentivar o consumo de produtos e serviços dos  pequenos empreendedores, agricultores rurais e urbanos em situação de vulnerabilidade.</Typography>
                     </Box>
                 </Grid>
 
                 <Grid item xs={6} >
-                    <Box className="video" padding={10} style={{ height: '40vh', marginBottom: 300 }}>
+                    <Box className="video" padding={10} style={{ height: '40vh', marginBottom: 250 }}>
                         <iframe src="https://www.youtube.com/embed/sOHIQ1aW6FA" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
                     </Box>
                 </Grid>

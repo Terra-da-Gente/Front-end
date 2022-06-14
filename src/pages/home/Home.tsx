@@ -52,14 +52,9 @@ function Home() {
     const cardStyle = {
         display: "block",
         transitionDuration: "0.3s",
-        width: "35vw",
-        height: "50vh"
-      };
-
-      const cardStyleImg = {
-        width: "25vw",
-        height: "30vh"
-      };
+        width: "300px",
+        height: "420px"
+    };
 
     return (
         <>
@@ -126,13 +121,15 @@ function Home() {
                 {/* ----- ITEM 4 ----- */}
                 <Grid item xs={12} style={{ height: '60vh', marginBottom: 200 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
-                    <Swiper className="mySwiperProduct" slidesPerView={5} spaceBetween={10} modules={[Navigation]} navigation={true}>
+                    <Swiper className=" " slidesPerView={5} spaceBetween={10} modules={[Navigation]} navigation={true}>
                         {
                             produtos.map(produtos => (
                                 <SwiperSlide>
                                     <Card style={cardStyle}>
-                                        <CardContent style={cardStyleImg}>
-                                            <img src={produtos.foto1} className="tamanho-img-card" />
+                                        <CardContent>
+                                            <Box display="flex" alignItems="center" justifyContent="center">
+                                                < img src={produtos.foto1} className="imagemok"/>
+                                            </Box>
                                             <CardContent>
                                                 <Typography variant='h5' className='produto'>{produtos.nome}</Typography>
                                             </CardContent>

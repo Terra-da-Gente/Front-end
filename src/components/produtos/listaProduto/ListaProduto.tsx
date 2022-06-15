@@ -126,12 +126,14 @@ function ListaProduto() {
 
                 produtos.map(produtos => (
                     <Box m={2} >
-                        <Card variant="outlined">
+                        <Card style={cardStyle}>
                             <CardContent>
                                 {/* <Typography color="textSecondary" gutterBottom>
                                     Produtos
                                 </Typography> */}
-                                <img src={produtos.foto1} alt="imagem_do_produto" className="imagem-produto" />
+                                <Box display="flex" alignItems="center" justifyContent="center">
+                                    <img src={produtos.foto1} className="imagemok" />
+                                </Box>
                                 <Typography variant="h4" component="h2">
                                     {produtos.nome}
                                 </Typography>
@@ -152,7 +154,7 @@ function ListaProduto() {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Box display="flex" justifyContent="center" mb={1.5}>
+                                <Box display="flex" alignItems="center" mb={1.5}>
 
                                     <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
@@ -163,17 +165,17 @@ function ListaProduto() {
                                     </Link>
                                     <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
                                         <Box mx={1}>
-                                            <Button variant="contained" size='small' color="secondary" className='button-deletar'>
+                                            <Button variant="outlined" size='small' color="secondary" className='button-deletar'>
                                                 deletar
                                             </Button>
                                         </Box>
-                                    </Link>
-                                    <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
-                                        <Box mx={1}>
-                                            <Button variant='contained' size='small' color="secondary" className='button-comprar'>
-                                                Comprar
-                                            </Button>
-                                        </Box>
+                                        <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
+                                            <Box mx={1}>
+                                                <Button variant='contained' size='small' color="secondary" className='button-comprar'>
+                                                    Comprar
+                                                </Button>
+                                            </Box>
+                                        </Link>
                                     </Link>
                                 </Box>
                             </CardActions>

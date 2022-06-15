@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .back {
-    background: linear-gradient(36deg, #223f12 1%, #21e71a 99%)!important;
+    background-image: url('/public/img/kfj.png') !important;
 }
 
 .font {

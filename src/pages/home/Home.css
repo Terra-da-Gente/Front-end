@@ -42,6 +42,11 @@
 }
 
 .img3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/shutterstock-491150020-1000x600.jpg');
+    background-position: 10% 20%;
+}
+
+.img4 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/insata.png');
     background-position: 10% 20%;
 }
@@ -79,6 +84,16 @@
 
 .categoria-higiene {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/melhores-produtos-de-limpeza.jpg');
+    border-radius: 100%;
+}
+
+.categoria-doces {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/geleias-ana-maria-braga.jpg');
+    border-radius: 100%;
+}
+
+.categoria-organicos {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/5f7df90ea8bd2.jpg');
     border-radius: 100%;
 }
 

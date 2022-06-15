@@ -47,21 +47,27 @@ function ListaProduto() {
                             <Box display="flex" alignItems="center" justifyContent="center">
                                 <img src={produtos.foto1} className="imagemok" alt='produto' />
                             </Box>
-                            <Typography variant="h4" component="h2">
+
+                            <Typography style={{marginTop: 10}} variant="h5" component="h2">
                                 {produtos.nome}
                             </Typography>
-                            <Typography variant="h6" component="p">
+
+                            {/* <Typography variant="h6" component="p">
                                 {produtos.categoria?.nome}
-                            </Typography>
+                            </Typography> */}
+
                             <Typography variant="body2" component="p">
                                 {produtos.descricao}
                             </Typography>
-                            <Typography variant="body2" component="p">
+
+                            <Typography variant="h6" component="p">
                                 R$ {produtos.preco}
                             </Typography>
-                            <Typography variant="body2" component="p">
+
+                            <Typography variant="subtitle1" component="p">
                                 {produtos.peso} kg / l
                             </Typography>
+
                             {/* <Typography variant="body2" component="p">
                                     Perecível: {produtos.perecivel ? 'Sim' : 'Não'}
                                 </Typography> */}
@@ -108,24 +114,31 @@ function ListaProduto() {
                             <Box display="flex" alignItems="center" justifyContent="center">
                                 <img src={produtos.foto1} className="imagemok" />
                             </Box>
-                            <Typography variant="h4" component="h2">
+
+                            <Typography style={{marginTop: 10}} variant="h5" component="h2">
                                 {produtos.nome}
                             </Typography>
+
                             <Typography variant="h6" component="p">
                                 {produtos.categoria?.nome}
                             </Typography>
+
                             <Typography variant="body2" component="p">
                                 {produtos.descricao}
                             </Typography>
-                            <Typography variant="body2" component="p">
+
+                            <Typography variant="h6" component="p">
                                 R$ {produtos.preco}
                             </Typography>
-                            <Typography variant="body2" component="p">
+
+                            <Typography variant="subtitle1" component="p">
                                 {produtos.peso} kg/l
                             </Typography>
-                            <Typography variant="body2" component="p">
+
+                            {/* <Typography variant="body2" component="p">
                                 Perecível: {produtos.perecivel ? 'Sim' : 'Não'}
-                            </Typography>
+                            </Typography> */}
+
                         </CardContent>
                         <CardActions>
                             <Box display="flex" justifyContent="center" mb={1.5}>
@@ -139,14 +152,14 @@ function ListaProduto() {
                                     </Link>
 
                                     <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
-                                        <Box mx={1} display="flex" justifyContent="center"> 
+                                        <Box mx={1} display="flex" justifyContent="center">
                                             <Button variant='contained' size='small' color="secondary" className='button-comprar'>
                                                 Comprar
                                             </Button>
                                         </Box>
                                     </Link>
                                 </Box>
-                                
+
                                 <Box>
                                     <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
                                         <Box mx={1}>

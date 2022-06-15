@@ -23,7 +23,7 @@ function Home() {
         (state) => state.tokens
     )
 
-    let history = useNavigate();
+    // let history = useNavigate();
 
     async function getCategoria() {
         await busca("/categoria", setCategoria, {
@@ -60,11 +60,8 @@ function Home() {
 
     return (
 
-        
-
         <>
 
-                
             {/* ----- ITEM 1 ----- */}
             <Grid
                 container
@@ -93,11 +90,18 @@ function Home() {
                         <SwiperSlide className="img2">
                             <Box display='inline' alignItems='center' justifyContent='center'>
                                 <Typography variant="h2">Produtos Selecionados</Typography>
-                                <Box display='inline'><Typography variant="h4">Projeto voltado para pequenos produtores</Typography></Box>
+                                <Box display='inline'><Typography variant="h4">Alimentos Naturais e Orgânicos</Typography></Box>
                             </Box>
                         </SwiperSlide>
 
                         <SwiperSlide className="img3">
+                            <Box display='inline' alignItems='center' justifyContent='center'>
+                                <Typography variant="h2">Venha conhecer nossa Horta</Typography>
+                                <Box display='inline'><Typography variant="h4">Entre em contato e agende uma visita</Typography></Box>
+                            </Box>
+                        </SwiperSlide>
+
+                        <SwiperSlide className="img4">
                             <Box display='inline' alignItems='center' justifyContent='center'>
                                 <Typography variant="h2">Nosso Instagram</Typography>
                                 <Box display='inline'><Typography variant="h4">Para saber nossas novidades</Typography></Box>
@@ -120,11 +124,9 @@ function Home() {
 
                         <SwiperSlide className="imagemswiper"></SwiperSlide>
                     </Swiper>
-
                 </Grid>
 
                 {/* ----- ITEM 3 ----- */}
-
                 <Grid item xs={12} style={{ height: '30vh', marginBottom: 200, marginTop: 100 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
                     <Swiper
@@ -138,10 +140,10 @@ function Home() {
                         <SwiperSlide className="categoria-lacteos">Lácteos</SwiperSlide>
                         <SwiperSlide className="categoria-sucos">Sucos e bebidas</SwiperSlide>
                         <SwiperSlide className="categoria-higiene">Higiene e limpeza</SwiperSlide>
-                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
-                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
-                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
-                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
+                        <SwiperSlide className="categoria-doces">Doces e Geleias</SwiperSlide>
+                        <SwiperSlide className="categoria-organicos">Orgânicos</SwiperSlide>
+                        {/* <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
+                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide> */}
                     </Swiper>
                 </Grid>
 
@@ -179,10 +181,9 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 5 ----- */}
-                < Grid item xs={6} style={{ height: '30vh', marginBottom: 250, marginTop:100 }}>
+                < Grid item xs={6} style={{ height: '30vh', marginBottom: 250, marginTop: 100 }}>
                     <Box marginLeft={20} alignItems="center">
                         <Typography align="left" variant='h5' style={{ fontWeight: 'bold', letterSpacing: 4, lineHeight: 2 }}>Terra da Gente</Typography>
-                        {/* <Typography align="left" variant='h6' style={{ marginTop: 15 }}>Terra da Gente</Typography> */}
                         <Typography align="left" variant='h6' style={{ marginTop: 15 }}>O projeto Terra da Gente visa melhorar a qualidade de vida e fornecer meios de subsistência para as famílias em situação de assentamento envolvidas, bem como incentivar o consumo de produtos e serviços dos  pequenos empreendedores, agricultores rurais e urbanos em situação de vulnerabilidade.</Typography>
                     </Box>
                 </Grid>

@@ -38,12 +38,16 @@
     letter-spacing: 0.1cm!important;
     padding: 10px 20px;
     transition: 0.5s!important;
+    position: fixed!important;
+    margin-bottom: 5px!important;
 }
 
 .button-comprar:hover {
     background-color: #025373!important;
     letter-spacing: 0.12cm!important;
     box-shadow: 0 0 35px #031c8c!important;
+    position: fixed;
+    margin-bottom: 5px!important;
 }
 
 .imagemok {

@@ -13,7 +13,7 @@ function Cards() {
             <img className="img-fluid" src="https://i.imgur.com/wt7UemZ.png"/>
           </div>
           <div className="team-content">
-            <h3 className="name">Alexandre</h3>
+            <h3 className="name">Alexandre Barbosa</h3>
             <h4 className="title">Web Developer</h4>
           </div>
           <ul className="social redes-sobre-nos">
@@ -60,7 +60,7 @@ function Cards() {
             <img className="img-fluid" src="https://i.imgur.com/SaAp6Zo.png"/>
           </div>
           <div className="team-content">
-            <h3 className="name">Gustavo</h3>
+            <h3 className="name">Gustavo Henrique</h3>
             <h4 className="title">Web Developer</h4>
           </div>
           <ul className="social">
@@ -130,7 +130,7 @@ function Cards() {
             <img className="img-fluid" src="https://i.imgur.com/jnVoxIU.png"/>
           </div>
           <div className="team-content">
-            <h3 className="name">Tainã</h3>
+            <h3 className="name">Tainã Xavier</h3>
             <h4 className="title">Web Developer</h4>
           </div>
           <ul className="social">

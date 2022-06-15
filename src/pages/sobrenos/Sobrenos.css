@@ -18,7 +18,7 @@ body{
     align-items: center;
     font-family: 'Montserrat', sans-serif!important;
     font-style: normal;
-    font-size: 36px;
+    font-size: 50px;
     line-height: 44px;
     text-align: center;
     margin-top: 50px;
@@ -32,26 +32,22 @@ body{
     font-family: 'Libre Baskerville', serif!important;
 }
 
-/* .titulo-nos{
-    height: 70px;
+.texto-sobre{
+    font-size: 50px;
 }
 
-.texto-sobre-nos{
-    font-family: 'Montserrat', sans-serif!important;
-}
+
 
 .texto-nosso-time{
     font-family: 'Libre Baskerville', serif!important;
     font-weight: bolder!important;
 }
-=======
+
 .titulosobrenos{
     font-family: 'Montserrat', sans-serif!important;
 }
 
-.textosobrenos{
-    font-family: 'Montserrat', sans-serif!important;
-} */
+
 
 .segundoconteudo{
     margin-top: 48px;

@@ -37,7 +37,7 @@ function Cards() {
             <img className="img-fluid" src="https://i.imgur.com/F1QfUzU.png"/>
           </div>
           <div className="team-content">
-            <h3 className="name">Daniel</h3>
+            <h3 className="name">Daniel Gardeli</h3>
             <h4 className="title">Web Developer</h4>
           </div>
           <ul className="social">

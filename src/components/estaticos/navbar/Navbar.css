@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .back {
     background-image: url('/public/img/kfj.png') !important;
+    background-repeat: no-repeat;
+    
 }
 
 .font {

@@ -38,14 +38,14 @@ function ListaProduto() {
     if (token === "") {
         {
             produtosComponent = produtos.map(produtos => (
-                <Box display="flex" flexWrap="wrap" justifyContent="center">
-                    <Card style={cardStyle}>
+                <Box display="flex" flexWrap="wrap" justifyContent="center" m={3}>
+                    <Card className='cardStyle'>
                         <CardContent>
                             {/* <Typography color="textSecondary" gutterBottom>
                                     Produtos
                                 </Typography> */}
                             <Box display="flex" alignItems="center" justifyContent="center">
-                                <img src={produtos.foto1} className="imagemok" alt='produto'/>
+                                <img src={produtos.foto1} className="imagemok" alt='produto' />
                             </Box>
                             <Typography variant="h4" component="h2">
                                 {produtos.nome}
@@ -100,7 +100,7 @@ function ListaProduto() {
         {
             produtosComponent = produtos.map(produtos => (
                 <Box m={2} >
-                    <Card style={cardStyle}>
+                    <Card className='cardStyle'>
                         <CardContent>
                             {/* <Typography color="textSecondary" gutterBottom>
                                     Produtos
@@ -128,30 +128,36 @@ function ListaProduto() {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Box display="flex" alignItems="center" mb={1.5}>
-
-                                <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
-                                    <Box mx={1}>
-                                        <Button variant="contained" className="marginLeft button-atualizar" size='small' color="primary" >
-                                            atualizar
-                                        </Button>
-                                    </Box>
-                                </Link>
-                                <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
-                                    <Box mx={1}>
-                                        <Button variant="outlined" size='small' color="secondary" className='button-deletar'>
-                                            deletar
-                                        </Button>
-                                    </Box>
-                                    <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
+                            <Box display="flex" justifyContent="center" mb={1.5}>
+                                <Box>
+                                    <Link to={`/formularioProduto/${produtos.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
+                                            <Button variant="contained" className="marginLeft button-atualizar" size='small' color="primary" >
+                                                atualizar
+                                            </Button>
+                                        </Box>
+                                    </Link>
+
+                                    <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none" >
+                                        <Box mx={1} display="flex" justifyContent="center"> 
                                             <Button variant='contained' size='small' color="secondary" className='button-comprar'>
                                                 Comprar
                                             </Button>
                                         </Box>
                                     </Link>
-                                </Link>
+                                </Box>
+                                
+                                <Box>
+                                    <Link to={`/deletarProduto/${produtos.id}`} className="text-decorator-none">
+                                        <Box mx={1}>
+                                            <Button variant="outlined" size='small' color="secondary" className='button-deletar'>
+                                                deletar
+                                            </Button>
+                                        </Box>
+                                    </Link>
+                                </Box>
                             </Box>
+
                         </CardActions>
                     </Card>
                 </Box>
@@ -163,7 +169,7 @@ function ListaProduto() {
             <Grid
                 container
                 direction="row"
-                justifyContent="space-evenly"
+                justifyContent="center"
                 alignItems="center"
             >
                 {produtosComponent}

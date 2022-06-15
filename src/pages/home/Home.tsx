@@ -59,7 +59,12 @@ function Home() {
     };
 
     return (
+
+        
+
         <>
+
+                
             {/* ----- ITEM 1 ----- */}
             <Grid
                 container
@@ -102,7 +107,7 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 2 ----- */}
-                <Grid item xs={12} style={{ height: '20vh' }} alignItems="center">
+                <Grid item xs={12} style={{ height: '7vh' }} alignItems="center">
                     <Swiper
                         modules={[Pagination]}
                         slidesPerView={1}

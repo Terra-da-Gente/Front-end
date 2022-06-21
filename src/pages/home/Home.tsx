@@ -119,7 +119,7 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 3 ----- */}
-                <Grid item xs={12} style={{ height: '30vh', marginBottom: 200, marginTop: 100 }} alignItems="center">
+                <Grid item xs={12} style={{ height: '30vh', marginBottom: 175, marginTop: 100 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">ARRASTE PRO LADO E CONFIRA VÁRIAS OFERTAS</Typography>
                     <Swiper
                         className="mySwiperCategoria"

@@ -20,7 +20,8 @@ function CadastrarCategoria() {
     const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
         nome: '',
-        ativo: true
+        ativo: true,
+        foto1: ''
     })
 
     useEffect(() => {
@@ -146,6 +147,8 @@ function CadastrarCategoria() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro categoria</Typography>
                 <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="nome" variant="outlined" name="nome" margin="normal" fullWidth required />
+                <TextField value={categoria.foto1} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="foto1" label="foto1" variant="outlined" name="foto1" margin="normal" fullWidth/>
+
                 <Button type="submit" variant="contained" className='button-finalizar-categoria'>
                     Finalizar
                 </Button>

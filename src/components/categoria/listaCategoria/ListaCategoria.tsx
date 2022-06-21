@@ -93,7 +93,7 @@ function ListaCategoria() {
           <Box m={2} >
             <Card variant="outlined">
               <Link to={`/categoria/${categoria.id}`} className="text-decorator-none" >
-                <img src={categoria.foto1} className="categorias-img" />
+                <img src={categoria.foto1} className="categorias-img" style={{height: "80px", width: "80px", margin: 10}}/>
                 <CardContent>
                   <Typography color="textSecondary" gutterBottom>
                     Categoria

@@ -51,130 +51,131 @@ function ListaCategoriaProduto() {
         getCategoria()
     }, [id])
 
-    console.log(categorias)
+    // console.log(categorias)
 
-    // var produtosComponent;
+    var produtosComponent;
 
-    // if (token === "") {
-    //     {
-    //         produtosComponent =
-    //             // produtos.map(produtos => (
-    //             categorias.map(categoria => (
-    //                 <>
-    //                     <Box>
-    //                         <Typography variant='h5'>
-    //                             {categoria.produto?.nome}
-    //                         </Typography>
-    //                     </Box>
+    if (token === "") {
+        {
+            produtosComponent =
+                categorias.produto?.map(prod => (
+                    <>
+                        <Box>
+                            <Typography variant='h2'>
+                                {prod.categoria?.nome}
+                            </Typography>
+                        </Box>
 
-    //                     <Box display="flex" flexWrap="wrap" justifyContent="center" m={3}>
-    //                         <Card className='cardStyle'>
-    //                             <CardContent>
-    //                                 <Box display="flex" alignItems="center" justifyContent="center">
-    //                                     <img src={categoria.produto?.foto1} className="imagemok" alt='produto' />
-    //                                 </Box>
+                        <Box display="flex" flexWrap="wrap" justifyContent="center" m={3}>
+                            <Card className='cardStyle'>
+                                <CardContent>
+                                    <Box display="flex" alignItems="center" justifyContent="center">
+                                        <img src={prod.foto1} className="imagemok" alt='produto' />
+                                    </Box>
 
-    //                                 <Typography style={{ marginTop: 10 }} variant="h5" component="h2">
-    //                                     {categoria.produto?.nome}
-    //                                 </Typography>
+                                    <Typography style={{ marginTop: 10 }} variant="h5" component="h2">
+                                        {prod.nome}
+                                    </Typography>
 
-    //                                 <Typography variant="body2" component="p">
-    //                                     {/* {produtos.descricao} */}
-    //                                 </Typography>
+                                    <Typography variant="body2" component="p">
+                                        {/* {produtos.descricao} */}
+                                    </Typography>
 
-    //                                 <Typography variant="h6" component="p">
-    //                                     R$ {categoria.produto?.preco}
-    //                                 </Typography>
+                                    <Typography variant="h6" component="p">
+                                        R$ {prod.preco}
+                                    </Typography>
 
-    //                                 <Typography variant="subtitle1" component="p">
-    //                                     {/* {produtos.peso} kg / l */}
-    //                                 </Typography>
-    //                             </CardContent>
-    //                             <CardActions>
+                                    <Typography variant="subtitle1" component="p">
+                                        {prod.peso} kg / l
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
 
-    //                                 <Box display="flex" justifyContent="center" mb={1.5}>
+                                    <Box display="flex" justifyContent="center" mb={1.5}>
 
-    //                                     {/* <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none">
-    //                                         <Box mx={1}>
-    //                                             <Button variant='contained' size='small' color="secondary" className='button-comprar'>
-    //                                                 Comprar
-    //                                             </Button>
-    //                                         </Box>
-    //                                     </Link> */}
-    //                                 </Box>
-    //                             </CardActions>
-    //                         </Card>
-    //                     </Box></>
-    //             ))
-    //     }
+                                        <Link to={`/carrinho/${prod.id}`} className="text-decorator-none">
+                                            <Box mx={1}>
+                                                <Button variant='contained' size='small' color="secondary" className='button-comprar'>
+                                                    Comprar
+                                                </Button>
+                                            </Box>
+                                        </Link>
+                                    </Box>
+                                </CardActions>
+                            </Card>
+                        </Box></>
+                ))
+        }
 
-    // } else {
-    //     produtosComponent =
-    //         // produtos.map(produtos => (
-    //         categorias.map(categoria => (
-    //             <>
-    //                 <Box>
-    //                     <Typography variant='h5'>
-    //                         {categoria.produto?.nome}
-    //                     </Typography>
-    //                 </Box>
+    } else {
+        produtosComponent =
+            categorias.produto?.map(prod => (
+                <>
+                    <Box display="flex" flexWrap="wrap" justifyContent="center" m={3}>
+                        <Card className='cardStyle'>
+                            <CardContent>
+                                <Box display="flex" alignItems="center" justifyContent="center">
+                                    <img src={prod.foto1} className="imagemok" alt='produto' />
+                                </Box>
 
-    //                 <Box display="flex" flexWrap="wrap" justifyContent="center" m={3}>
-    //                     <Card className='cardStyle'>
-    //                         <CardContent>
-    //                             <Box display="flex" alignItems="center" justifyContent="center">
-    //                                 <img src={categoria.produto?.foto1} className="imagemok" alt='produto' />
-    //                             </Box>
+                                <Typography style={{ marginTop: 10 }} variant="h5" component="h2">
+                                    {prod.nome}
+                                </Typography>
 
-    //                             <Typography style={{ marginTop: 10 }} variant="h5" component="h2">
-    //                                 {categoria.produto?.nome}
-    //                             </Typography>
+                                <Typography variant="body2" component="p">
+                                    {/* {produtos.descricao} */}
+                                </Typography>
 
-    //                             <Typography variant="body2" component="p">
-    //                                 {/* {produtos.descricao} */}
-    //                             </Typography>
+                                <Typography variant="h6" component="p">
+                                    R$ {prod.preco}
+                                </Typography>
 
-    //                             <Typography variant="h6" component="p">
-    //                                 R$ {categoria.produto?.preco}
-    //                             </Typography>
+                                <Typography variant="subtitle1" component="p">
+                                    {prod.peso} kg / l
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
 
-    //                             <Typography variant="subtitle1" component="p">
-    //                                 {/* {produtos.peso} kg / l */}
-    //                             </Typography>
-    //                         </CardContent>
-    //                         <CardActions>
+                                <Box display="flex" justifyContent="center" mb={1.5}>
 
-    //                             <Box display="flex" justifyContent="center" mb={1.5}>
+                                    <Link to={`/carrinho/${prod.id}`} className="text-decorator-none">
+                                        <Box mx={1}>
+                                            <Button variant='contained' size='small' color="secondary" className='button-comprar'>
+                                                Comprar
+                                            </Button>
+                                        </Box>
+                                    </Link>
+                                </Box>
+                            </CardActions>
+                        </Card>
+                    </Box></>
+            ))
+    }
 
-    //                                 {/* <Link to={`/carrinho/${produtos.id}`} className="text-decorator-none">
-    //                                 <Box mx={1}>
-    //                                     <Button variant='contained' size='small' color="secondary" className='button-comprar'>
-    //                                         Comprar
-    //                                     </Button>
-    //                                 </Box>
-    //                             </Link> */}
-    //                             </Box>
-    //                         </CardActions>
-    //                     </Card>
-    //                 </Box></>
-    //         ))
-    // }
+    return (
+        <>
+            <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <Grid item xs={12}>
+                    <Typography variant='h3' align='center' style={{color: '#4a8729', margin: 10}}>
+                        {categorias.nome}
+                    </Typography>
+                </Grid>
 
-return (
-    <>
-        <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-        >
-            {/* {produtosComponent} */}
-            { categorias.produto?.map(prod => (
+
+                {produtosComponent}
+
+                {/* { categorias.produto?.map(prod => (
                 <li>{ prod.nome }</li>
-            )) }
-        </Grid>
-    </>
-)
+            )) } */}
+
+            </Grid>
+        </>
+    )
 }
 
 export default ListaCategoriaProduto;

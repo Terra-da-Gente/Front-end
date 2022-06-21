@@ -2,15 +2,13 @@ import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaCategoriaProduto.css';
-import { buscaId, buscaIdsemtoken, buscasemtoken } from '../../../services/Service';
+import { buscaId } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
-import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
 
 function ListaCategoriaProduto() {
 
-    const [produtos, setProdutos] = useState<Produto[]>([])
     const [categorias, setCategorias] = useState<Categoria>({
         nome: "",
         ativo: false,

@@ -32,3 +32,16 @@
     letter-spacing: 0.12cm!important;
     box-shadow: 0 0 35px #8C041D!important;
 }
+
+.categorias-img {
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 2px;
+    border: 4px solid yellowgreen;
+    height: 5%;
+    width: 5%;
+}
+
+.text-decorator-none {
+    text-decoration: none;
+}

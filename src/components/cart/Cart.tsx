@@ -125,7 +125,7 @@ function Cart() {
                                 Produtos
                             </Typography> */}
 
-                            <Typography variant="h5" component="h2">
+                            <Typography variant="h5" component="h2" style={{marginTop: 10}}>
                                 {produto.nome} {produto.peso} kg / l
                             </Typography>
 
@@ -147,7 +147,7 @@ function Cart() {
                                 name="quantidade" margin="normal" fullWidth
                             />
 
-                            <Typography variant="body2" component="p">
+                            <Typography variant="body1" component="p">
                                 Total: R$ {valorTotal().toFixed(2)}
                             </Typography>
 

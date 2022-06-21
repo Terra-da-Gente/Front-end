@@ -34,11 +34,7 @@ function Home() {
     }
 
     async function getProduto() {
-        await busca("/produto", setProdutos, {
-            headers: {
-                'Authorization': token
-            }
-        })
+        await buscasemtoken("/produto", setProdutos)
     }
 
     useEffect(() => {
@@ -61,7 +57,6 @@ function Home() {
     return (
 
         <>
-
             {/* ----- ITEM 1 ----- */}
             <Grid
                 container

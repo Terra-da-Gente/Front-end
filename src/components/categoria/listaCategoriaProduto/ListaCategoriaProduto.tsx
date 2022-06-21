@@ -161,7 +161,7 @@ function ListaCategoriaProduto() {
                 alignItems="center"
             >
                 <Grid item xs={12}>
-                    <Typography variant='h3' align='center' style={{color: '#4a8729', margin: 10}}>
+                    <Typography variant='h4' align='center' style={{color: 'black', marginTop: 40, marginBottom:20, letterSpacing: 6, textTransform: 'uppercase' }}>
                         {categorias.nome}
                     </Typography>
                 </Grid>

@@ -26,11 +26,7 @@ function Home() {
     // let history = useNavigate();
 
     async function getCategoria() {
-        await busca("/categoria", setCategoria, {
-            headers: {
-                'Authorization': token
-            }
-        })
+        await buscasemtoken("/categoria", setCategoria)
     }
 
     async function getProduto() {
@@ -131,14 +127,11 @@ function Home() {
                         modules={[Navigation]}
                         navigation={true}
                     >
-                        <SwiperSlide className="categoria-graos">Grãos, cereais e farinhas</SwiperSlide>
-                        <SwiperSlide className="categoria-lacteos">Lácteos</SwiperSlide>
-                        <SwiperSlide className="categoria-sucos">Sucos e bebidas</SwiperSlide>
-                        <SwiperSlide className="categoria-higiene">Higiene e limpeza</SwiperSlide>
-                        <SwiperSlide className="categoria-doces">Doces e Geleias</SwiperSlide>
-                        <SwiperSlide className="categoria-organicos">Orgânicos</SwiperSlide>
-                        {/* <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
-                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide> */}
+                        {
+                            categoria.map(categoria => (
+                                <SwiperSlide className="categoria-graos">{categoria.nome}</SwiperSlide>
+                            ))
+                        }
                     </Swiper>
                 </Grid>
 

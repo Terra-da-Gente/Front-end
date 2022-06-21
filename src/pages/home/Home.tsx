@@ -103,7 +103,7 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 2 ----- */}
-                <Grid item xs={12} style={{ height: '7vh' }} alignItems="center">
+                <Grid item xs={12} style={{ height: '7vh', backgroundColor: "black" }} alignItems="center">
                     <Swiper
                         modules={[Pagination]}
                         slidesPerView={1}
@@ -130,12 +130,11 @@ function Home() {
                     >
                         {
                             categoria.map(categoria => (
-
                                 <SwiperSlide>
-                                    {/* <Link to={`/categoria/${categoria.id}`} className="text-decorator-none" > */}
                                     <Typography variant='h5' className='categoria-text' style={{ color: "white", textShadow: "1px 1px 2px black" }}>{categoria.nome}</Typography>
-                                    <img src={categoria.foto1} className="categorias" />
-                                    {/* </Link> */}
+                                    <Link to={`/categoria/${categoria.id}`} className="text-decorator-none" style={{ height: "250px", width: "250px" }}>
+                                        <img src={categoria.foto1} className="categorias" />
+                                    </Link>
                                 </SwiperSlide>
                             ))
                         }
@@ -143,7 +142,7 @@ function Home() {
                 </Grid>
 
                 {/* ----- ITEM 4 ----- */}
-                <Grid item xs={12} style={{ height: '60vh', marginBottom: 100, marginTop: 20 }} alignItems="center">
+                <Grid item xs={12} style={{ height: '60vh', marginBottom: 80, marginTop: 20 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
                     <Swiper className=" " slidesPerView={4} speed={800} slidesPerGroup={4} loop={true} spaceBetween={10} modules={[Navigation]} navigation={true}>
                         {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaCategoria.css';
 import { useNavigate } from 'react-router-dom';
-import { busca, buscasemtoken } from '../../../services/Service';
+import { buscasemtoken } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -51,18 +51,20 @@ function ListaCategoria() {
         categoria.map(categoria => (
           <Box m={2} >
             <Card variant="outlined">
-              <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Categoria
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  {categoria.nome}
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5} >
+              <Link to={`/categoria/${categoria.id}`} className="text-decorator-none" >
+                  <Typography color="textSecondary" style={{margin: 10}} >
+                    Categoria
+                  </Typography>
+                <img src={categoria.foto1} className="categorias-img" style={{height: "80px", width: "80px", margin: 10}}/>
+                <CardContent>
+                  <Typography variant="h5">
+                    {categoria.nome}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Box display="flex" justifyContent="center" mb={1.5} >
 
-                  {/* <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
+                    {/* <Link to={`/formularioCategoria/${categoria.id}`} className="text-decorator-none">
                     <Box mx={1}>
                       <Button variant="contained" className="button-atualizar" size='small'  >
                         atualizar
@@ -76,9 +78,10 @@ function ListaCategoria() {
                       </Button>
                     </Box>
                   </Link> */}
-                  
-                </Box>
-              </CardActions>
+
+                  </Box>
+                </CardActions>
+              </Link>
             </Card>
           </Box>
         ))
@@ -89,14 +92,18 @@ function ListaCategoria() {
         categoria.map(categoria => (
           <Box m={2} >
             <Card variant="outlined">
-              <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Categoria
-                </Typography>
-                <Typography variant="h5" component="h2">
-                  {categoria.nome}
-                </Typography>
-              </CardContent>
+              <Link to={`/categoria/${categoria.id}`} className="text-decorator-none" >
+                <img src={categoria.foto1} className="categorias-img" style={{height: "80px", width: "80px", margin: 10}}/>
+                <CardContent>
+                  <Typography color="textSecondary" gutterBottom>
+                    Categoria
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    {categoria.nome}
+                  </Typography>
+                </CardContent>
+              </Link>
+
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5} >
 
@@ -117,7 +124,7 @@ function ListaCategoria() {
                 </Box>
               </CardActions>
             </Card>
-          </Box>
+          </Box >
         ))
     }
 

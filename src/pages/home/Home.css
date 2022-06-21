@@ -1,3 +1,5 @@
+/* ----- ITEM 1 ----- */
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -51,6 +53,14 @@
     background-position: 10% 20%;
 }
 
+/* ----- ITEM 2 ----- */
+
+.imagemswiper {
+    background-image: url('../../assets/images/a.png');
+}
+
+/* ----- ITEM 3 ----- */
+
 .mySwiperCategoria {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
@@ -59,24 +69,22 @@
     padding: 0;
 }
 
-.prod1 {
-    background-image: url('../../assets/images/pexels-pixabay-219794.jpg');
-    border-radius: 100%;
-}
-
-.categoria {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/pexels-polina-tankilevitch-4110255.jpg');
-    border-radius: 100%;
-    background-position: right;
+.categorias {
     cursor: pointer;
-    color: white;
+    border-radius: 50%;
+    padding: 1%;
+    border: 4px solid yellowgreen;
 }
 
-.swiper-image {
-    border-radius: 100%;
+.categoria-text {
+    position: absolute;
+    left: center;
+    color: rgb(0, 0, 0);
 }
 
-.produto {
+/* ----- ITEM 4 ----- */
+
+.produto-text {
     position: absolute;
     left: center;
     color: rgb(0, 0, 0);
@@ -106,21 +114,16 @@
     box-shadow: 0 0 35px #031c8c !important;
 }
 
-.imagemok {
+/* .imagemok {
     width: 200px !important;
     height: 250px !important;
     transition: 0.5s !important;
-}
+} */
 
 .imagemok:hover {
     width: 200px !important;
     height: 250px !important;
     box-shadow: 0 0 20px #868686 !important;
-}
-
-.imagemswiper {
-    background-image: url('../../assets/images/a.png');
-
 }
 
 /* .swiper-wrapper  {

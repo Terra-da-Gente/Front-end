@@ -14,6 +14,8 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { red } from "@material-ui/core/colors";
+import { CategoryOutlined } from "@material-ui/icons";
 
 function Home() {
     const [categoria, setCategoria] = useState<Categoria[]>([])
@@ -26,19 +28,11 @@ function Home() {
     // let history = useNavigate();
 
     async function getCategoria() {
-        await busca("/categoria", setCategoria, {
-            headers: {
-                'Authorization': token
-            }
-        })
+        await buscasemtoken("/categoria", setCategoria)
     }
 
     async function getProduto() {
-        await busca("/produto", setProdutos, {
-            headers: {
-                'Authorization': token
-            }
-        })
+        await buscasemtoken("/produto", setProdutos)
     }
 
     useEffect(() => {
@@ -59,9 +53,7 @@ function Home() {
     };
 
     return (
-
         <>
-
             {/* ----- ITEM 1 ----- */}
             <Grid
                 container
@@ -136,20 +128,23 @@ function Home() {
                         modules={[Navigation]}
                         navigation={true}
                     >
-                        <SwiperSlide className="categoria-graos">Grãos, cereais e farinhas</SwiperSlide>
-                        <SwiperSlide className="categoria-lacteos">Lácteos</SwiperSlide>
-                        <SwiperSlide className="categoria-sucos">Sucos e bebidas</SwiperSlide>
-                        <SwiperSlide className="categoria-higiene">Higiene e limpeza</SwiperSlide>
-                        <SwiperSlide className="categoria-doces">Doces e Geleias</SwiperSlide>
-                        <SwiperSlide className="categoria-organicos">Orgânicos</SwiperSlide>
-                        {/* <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide>
-                        <SwiperSlide className="prod1">Grãos, cereais e farinhas</SwiperSlide> */}
+                        {
+                            categoria.map(categoria => (
+
+                                <SwiperSlide>
+                                    {/* <Link to={`/categoria/${categoria.id}`} className="text-decorator-none" > */}
+                                    <Typography variant='h5' className='categoria-text' style={{ color: "white", textShadow: "1px 1px 2px black" }}>{categoria.nome}</Typography>
+                                    <img src={categoria.foto1} className="categorias" />
+                                    {/* </Link> */}
+                                </SwiperSlide>
+                            ))
+                        }
                     </Swiper>
                 </Grid>
 
                 {/* ----- ITEM 4 ----- */}
-                <Grid item xs={12} style={{ height: '60vh', marginBottom: 100 }} alignItems="center">
-                    <Typography style={{ letterSpacing: 6, marginBottom: 40 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
+                <Grid item xs={12} style={{ height: '60vh', marginBottom: 100, marginTop: 20 }} alignItems="center">
+                    <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
                     <Swiper className=" " slidesPerView={4} speed={800} slidesPerGroup={4} loop={true} spaceBetween={10} modules={[Navigation]} navigation={true}>
                         {
                             produtos.map(produtos => (
@@ -160,7 +155,7 @@ function Home() {
                                                 < img src={produtos.foto1} className="imagemok" />
                                             </Box>
                                             <CardContent>
-                                                <Typography variant='h5' className='produto'>{produtos.nome}</Typography>
+                                                <Typography variant='h5' className='produto-text'>{produtos.nome}</Typography>
                                             </CardContent>
                                             <CardContent>
                                                 <Typography variant='h6' className='preco'>R${produtos.preco}</Typography>

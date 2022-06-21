@@ -26,7 +26,8 @@ function CadastroProduto() {
     const [categoria, setCategoria] = useState<Categoria>({
         id: 0,
         nome: '',
-        ativo: true
+        ativo: true,
+        foto1: ''
     })
 
     const [produto, setProduto] = useState<Produto>({

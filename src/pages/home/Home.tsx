@@ -129,7 +129,7 @@ function Home() {
                     >
                         {
                             categoria.map(categoria => (
-                                <SwiperSlide className="categoria-graos">{categoria.nome}</SwiperSlide>
+                                <SwiperSlide className="categoria">{categoria.nome}</SwiperSlide>
                             ))
                         }
                     </Swiper>

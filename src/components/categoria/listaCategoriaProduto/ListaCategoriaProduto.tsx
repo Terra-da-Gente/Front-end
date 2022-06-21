@@ -2,10 +2,17 @@ import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaCategoriaProduto.css';
-import { buscaId } from '../../../services/Service';
+import { buscaId, buscasemtoken } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import Categoria from '../../../models/Categoria';
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Produto from '../../../models/Produto';
 
 function ListaCategoriaProduto() {
 
@@ -15,6 +22,8 @@ function ListaCategoriaProduto() {
         foto1: "",
         id: 0
     })
+
+    const [produtos, setProdutos] = useState<Produto[]>([])
 
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
@@ -31,10 +40,6 @@ function ListaCategoriaProduto() {
         marginTop: "25px"
     };
 
-    // async function getProduto() {
-    //     await buscasemtoken("/produto", setProdutos)
-    // }
-
     async function getCategoria() {
         await buscaId(`categoria/${id}`, setCategorias, {
             headers: {
@@ -43,15 +48,27 @@ function ListaCategoriaProduto() {
         })
     }
 
-    // useEffect(() => {
-    //     getProduto()
-    // }, [produtos.length])
+    async function getProduto() {
+        await buscasemtoken("/produto", setProdutos)
+    }
 
     useEffect(() => {
         getCategoria()
     }, [id])
 
+    useEffect(() => {
+        getProduto()
+    }, [produtos.length])
+    
+
     // console.log(categorias)
+
+    const cardStyle2 = {
+        display: "block",
+        transitionDuration: "0.3s",
+        width: "300px",
+        height: "420px"
+    };
 
     var produtosComponent;
 
@@ -161,18 +178,44 @@ function ListaCategoriaProduto() {
                 alignItems="center"
             >
                 <Grid item xs={12}>
-                    <Typography variant='h5' align='center' style={{color: 'black', marginTop: 50, marginBottom:20, letterSpacing: 6, textTransform: 'uppercase' }}>
+                    <Typography variant='h5' align='center' style={{ color: 'black', marginTop: 50, marginBottom: 20, letterSpacing: 6, textTransform: 'uppercase' }}>
                         {categorias.nome}
                     </Typography>
                 </Grid>
 
-
                 {produtosComponent}
 
-                {/* { categorias.produto?.map(prod => (
-                <li>{ prod.nome }</li>
-            )) } */}
-
+                <Grid item xs={12} style={{ height: '60vh', marginBottom: 80, marginTop: 100 }} alignItems="center">
+                    <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
+                    <Swiper className=" " slidesPerView={6} speed={800} slidesPerGroup={6} loop={true} spaceBetween={10} modules={[Navigation]} navigation={true}>
+                        {
+                            produtos.map(produtos => (
+                                <SwiperSlide>
+                                    <Card style={cardStyle2}>
+                                        <CardContent>
+                                            <Box display="flex" alignItems="center" justifyContent="center">
+                                                < img src={produtos.foto1} className="imagemok" />
+                                            </Box>
+                                            <CardContent>
+                                                <Typography variant='h5' className='produto-text'>{produtos.nome}</Typography>
+                                            </CardContent>
+                                            <CardContent>
+                                                <Typography variant='h6' className='preco'>R${produtos.preco}</Typography>
+                                            </CardContent>
+                                            <CardContent>
+                                                <Link to={`/carrinho/${produtos.id}`} >
+                                                    <Button className="button-comprar-home">
+                                                        Comprar
+                                                    </Button>
+                                                </Link>
+                                            </CardContent>
+                                        </CardContent>
+                                    </Card>
+                                </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </Grid>
             </Grid>
         </>
     )

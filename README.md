@@ -2,7 +2,7 @@
 API para Ecommerce, consumo em React.
 
 - [**Front-End**](https://github.com/nogran/Blog-Pessoal-Front-End)<br>
-  - Website https://terra-da-gente.netlify.app/
+  - Website - Netlify https://terra-da-gente.netlify.app/
 - [**Back-End**](https://github.com/nogran/Blog-Pessoal-Back-End)
   - Back-End - Heroku https://terradagente.herokuapp.com/
 

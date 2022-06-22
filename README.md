@@ -34,6 +34,7 @@ O projeto Terra da Gente visa melhorar a qualidade de vida e fornecer meios de s
 &nbsp;
 &nbsp;
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" width="70" height="70">
+ </div>
  
  ## Nosso Time:
  

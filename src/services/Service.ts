@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 export const api = axios.create({
     baseURL: 'https://nogran-terra-da-gente.herokuapp.com/'
 })
@@ -34,7 +33,6 @@ export const deleteId = async (url: any, header:any) => {
 
     // Não vou armazenar valor nenhuma variavel
     await api.delete(url, header)
-
 }
 
 export const cadastroUsuario = async (url:any, dados:any, setDados:any)=>{

@@ -2,9 +2,9 @@
 API para Ecommerce, consumo em React.
 
 - [**Front-End**](https://github.com/nogran/Blog-Pessoal-Front-End)<br>
-  - Deploy do Website https://terra-da-gente.netlify.app/
+  - Website https://terra-da-gente.netlify.app/
 - [**Back-End**](https://github.com/nogran/Blog-Pessoal-Back-End)
-  - Deploy do Back-End - Heroku https://terradagente.herokuapp.com/
+  - Back-End - Heroku https://terradagente.herokuapp.com/
 
 ## ✨ Objetivo:
 O projeto Terra da Gente visa melhorar a qualidade de vida e fornecer meios de subsistência para as famílias em situação de assentamento envolvidas, bem como incentivar o consumo de produtos e serviços dos pequenos empreendedores, agricultores rurais e urbanos em situação de vulnerabilidade.

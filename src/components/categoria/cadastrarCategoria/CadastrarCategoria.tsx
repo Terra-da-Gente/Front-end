@@ -25,7 +25,7 @@ function CadastrarCategoria() {
     })
 
     useEffect(() => {
-        if (token == "") {
+        if (token === "") {
             toast.error('Você precisa estar logado ', {
                 position: "top-right",
                 autoClose: 5000,
@@ -48,7 +48,7 @@ function CadastrarCategoria() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/categoria/${id}`, setCategoria, {
+        await buscaId(`/categoria/${id}`, setCategoria, {
             headers: {
                 'Authorization': token
             }
@@ -56,16 +56,15 @@ function CadastrarCategoria() {
     }
 
     function updatedCategoria(e: ChangeEvent<HTMLInputElement>) {
-
         setCategoria({
             ...categoria,
-            [e.target.name]: e.target.value,
+            [e.target.name]: e.target.value
         })
-
     }
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
+
         console.log("categoria " + JSON.stringify(categoria))
 
         if (id !== undefined) {
@@ -76,6 +75,7 @@ function CadastrarCategoria() {
                         'Authorization': token
                     }
                 })
+
                 toast.success('🌱 Categoria atualizado com sucesso ', {
                     position: "top-right",
                     autoClose: 5000,
@@ -86,7 +86,7 @@ function CadastrarCategoria() {
                     progress: undefined,
                     theme: "dark"
                 });
-                
+
 
             } catch (error) {
                 console.log(`Error: ${error}`)
@@ -100,15 +100,17 @@ function CadastrarCategoria() {
                     progress: undefined,
                     theme: "dark"
                 });
-            };
+            }
 
         } else {
+
             try {
                 await post(`/categoria`, categoria, setCategoria, {
                     headers: {
                         'Authorization': token
                     }
                 })
+
                 toast.success('🌱 Categoria cadastrado com sucesso ', {
                     position: "top-right",
                     autoClose: 5000,
@@ -119,7 +121,7 @@ function CadastrarCategoria() {
                     progress: undefined,
                     theme: "dark"
                 });
-                
+
 
             } catch (error) {
                 console.log(`Error: ${error}`)
@@ -147,15 +149,15 @@ function CadastrarCategoria() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro categoria</Typography>
                 <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="nome" variant="outlined" name="nome" margin="normal" fullWidth required />
-                <TextField value={categoria.foto1} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="foto1" label="foto1" variant="outlined" name="foto1" margin="normal" fullWidth/>
+                <TextField value={categoria.foto1} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="foto1" label="foto1" variant="outlined" name="foto1" margin="normal" fullWidth />
 
                 <Button type="submit" variant="contained" className='button-finalizar-categoria'>
                     Finalizar
                 </Button>
                 <Link to="/categoria">
-                <Button type="submit" variant="contained" className='button-cancelar-categoria'>
-                    Cancelar
-                </Button>
+                    <Button type="submit" variant="contained" className='button-cancelar-categoria'>
+                        Cancelar
+                    </Button>
                 </Link>
             </form>
         </Container>

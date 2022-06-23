@@ -144,7 +144,7 @@ function Home() {
                 {/* ----- ITEM 4 ----- */}
                 <Grid item xs={12} style={{ height: '60vh', marginBottom: 80, marginTop: 20 }} alignItems="center">
                     <Typography style={{ letterSpacing: 6 }} variant='h6' align="center">OFERTAS PRA COMPRAR AGORA</Typography>
-                    <Swiper className=" " slidesPerView={5} speed={800} slidesPerGroup={4} loop={true} spaceBetween={10} modules={[Navigation]} navigation={true}>
+                    <Swiper className=" " slidesPerView={5} speed={800} slidesPerGroup={5} loop={true} spaceBetween={10} modules={[Navigation]} navigation={true}>
                         {
                             produtos.map(produtos => (
                                 <SwiperSlide>

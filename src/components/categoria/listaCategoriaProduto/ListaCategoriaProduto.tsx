@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaCategoriaProduto.css';
 import { buscaId, buscasemtoken } from '../../../services/Service';
 import { useSelector } from 'react-redux';
@@ -13,6 +13,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Produto from '../../../models/Produto';
+import { Box } from '@mui/material';
 
 function ListaCategoriaProduto() {
 

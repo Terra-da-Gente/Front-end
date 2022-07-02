@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaProduto.css';
 import { buscasemtoken } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { Box } from '@mui/material';
 
 function ListaProduto() {
 

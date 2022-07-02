@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useState } from 'react'
-import { Box, Button, Container, FormControl, FormControlLabel, FormHelperText, FormLabel, InputLabel, MenuItem, Radio, RadioGroup, Select, TextField, Typography } from "@material-ui/core";
+import { Button, Container, FormControl, FormControlLabel, FormHelperText, FormLabel, InputLabel, MenuItem, Radio, RadioGroup, Select, TextField, Typography } from "@material-ui/core";
 import Categoria from '../../../models/Categoria';
 import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
@@ -8,6 +8,7 @@ import './CadastroProduto.css';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import { Box } from '@mui/material';
 
 
 

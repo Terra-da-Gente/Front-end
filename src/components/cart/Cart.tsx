@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, Grid, TextField, Typography } from "@material-ui/core";
+import { Button, Card, CardContent, Grid, TextField, Typography } from "@material-ui/core";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -15,6 +15,7 @@ import Produto from "../../models/Produto";
 import { buscaId } from "../../services/Service";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import './Cart.css';
+import { Box } from "@mui/material";
 
 function Cart() {
 

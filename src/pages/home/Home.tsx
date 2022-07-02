@@ -7,7 +7,7 @@ import "./Home.css";
 
 import Produto from "../../models/Produto";
 import Categoria from "../../models/Categoria";
-import { Box, Button, Card, CardContent, Grid, Typography } from "@material-ui/core";
+import { Button, Card, CardContent, Grid, Typography } from "@material-ui/core";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
@@ -16,6 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { red } from "@material-ui/core/colors";
 import { CategoryOutlined } from "@material-ui/icons";
+import { Box } from "@mui/material";
 
 function Home() {
     const [categoria, setCategoria] = useState<Categoria[]>([])

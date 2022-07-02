@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaCategoria.css';
 import { useNavigate } from 'react-router-dom';
 import { buscasemtoken } from '../../../services/Service';
@@ -8,6 +8,7 @@ import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import { Box } from '@mui/material';
 
 function ListaCategoria() {
   const [categoria, setCategoria] = useState<Categoria[]>([])

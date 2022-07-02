@@ -1,11 +1,12 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
-import { Grid, TextField, Typography, Box, Button } from "@material-ui/core";
+import { Grid, TextField, Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import User from "../../models/User";
 import { cadastroUsuario } from "../../services/Service";
 import { useNavigate } from "react-router-dom";
 import './CadastroUsuario.css';
 import { toast } from "react-toastify";
+import { Box } from "@mui/material";
 
 
 function CadastroUsuario() {

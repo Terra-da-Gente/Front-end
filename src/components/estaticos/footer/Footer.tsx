@@ -2,10 +2,11 @@ import React from "react";
 import { GitHub } from "@material-ui/icons";
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import {Box, Typography, Grid} from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import './Footer.css';
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import { Box } from "@mui/material";
 
 
 function Footer() {
@@ -24,9 +25,9 @@ function Footer() {
                     <Typography variant="h5" align="center" gutterBottom className="font1">Siga-nos nas redes sociais </Typography>
                 </Box>
                 <Box display="flex" alignItems="center" justifyContent="center">
-                    <a href="https://www.facebook.com/generationbrasil" target="_blank">
+                    {/* <a href="https://www.facebook.com/generationbrasil" target="_blank">
                         <FacebookIcon className="redes" />
-                    </a>
+                    </a> */}
                     <a href="https://www.instagram.com/terradagen" target="_blank">
                         <InstagramIcon className="redes" />
                     </a>
@@ -40,8 +41,8 @@ function Footer() {
                     <Typography variant="subtitle2" align="center" gutterBottom className="font1" >© 2022 Copyright:</Typography>
                 </Box>
                 <Box>
-                    <a target="_blank" href="https://terradagen.com.br">
-                        <Typography variant="subtitle2" gutterBottom className="font1"align="center">terradagen.com.br</Typography>
+                    <a target="_blank" href="https://terra-da-gente.netlify.app/">
+                        <Typography variant="subtitle2" gutterBottom className="font1"align="center">terra-da-gente.netlify.app</Typography>
                     </a>
                 </Box>
             </Box>
